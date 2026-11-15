@@ -76,7 +76,8 @@ function FounderGlance() {
 
   return (
     <div
-      className={`abt-glance abt-reveal${paused ? ' paused' : ''}`}
+      className="abt-glance abt-reveal"
+      data-paused={paused}
       style={{ '--i': index } as CSSProperties}
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
