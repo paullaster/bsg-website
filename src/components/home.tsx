@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 
 import { faq } from '@/data/faq';
+import About from '@/components/about';
 import Services from '@/components/services';
 import { SCREENSHOT } from '@/lib/seo';
 import {
@@ -189,36 +190,6 @@ function QSell() {
                 unoptimized
               />
             </figure>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function About() {
-  return (
-    <section id="about" className="group-section">
-      <div className="wrap group-layout">
-        <div className="group-heading">
-          <span className="section-kicker">About Brainspore</span>
-          <h2 className="display">Built to run in production, not just to demo.</h2>
-        </div>
-        <div className="group-copy">
-          <p>
-            Brainspore Group LLC is a software and IT solutions company in Nairobi. We build ERP
-            systems, automations and payment solutions for businesses in Kenya and East Africa. We
-            also build our own product, and creating QSell from the ledger to the online storefront
-            is how we know what it takes to run business software in production.
-          </p>
-          <div className="founder">
-            <span className="founder-label">Founder</span>
-            <strong>Paullaster Okoth</strong>
-            <p>
-              Paullaster founded Brainspore and leads its engineering. With 8 years of full-stack
-              experience in Node.js, React and MongoDB, plus Python and machine learning, Paullaster
-              has built payment integrations, wallet services and business platforms in Kenya.
-            </p>
           </div>
         </div>
       </div>
