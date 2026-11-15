@@ -3,10 +3,10 @@
  * Change facts here, not in individual files.
  */
 
-export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://brainsporellc.com').replace(
-  /\/$/,
-  '',
-);
+// The address the site actually lives at. brainsporellc.com redirects here, so this must be www.
+export const SITE_URL = (
+  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.brainsporellc.com'
+).replace(/\/$/, '');
 
 /**
  * The date the page content last meaningfully changed. Search engines distrust a "last modified"

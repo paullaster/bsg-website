@@ -2,7 +2,7 @@
 // Run AFTER deploying: `pnpm indexnow`. It sends only public page addresses. Nothing is sent automatically.
 import { readdir, readFile } from 'node:fs/promises';
 
-const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://brainsporellc.com').replace(
+const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.brainsporellc.com').replace(
   /\/$/,
   '',
 );
