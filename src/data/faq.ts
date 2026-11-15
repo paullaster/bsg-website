@@ -22,7 +22,7 @@ export const faq = [
   {
     question: 'Do you work with businesses outside Kenya?',
     answer:
-      'Yes. Brainspore is Kenya-based and builds software for businesses across Africa. The work is done remotely, so where your business is located is not a barrier to working with us.',
+      'Yes. Brainspore is Kenya-based and provides software and IT solutions for businesses across Africa.',
   },
   {
     question: 'How do I start a project with Brainspore?',
