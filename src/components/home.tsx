@@ -3,8 +3,8 @@
 import { useState } from 'react';
 import Image from 'next/image';
 
-import { faq } from '@/data/faq';
 import About from '@/components/about';
+import Faq from '@/components/faq';
 import QSell from '@/components/qsell';
 import Services from '@/components/services';
 import {
@@ -153,29 +153,6 @@ function Hero() {
         </div>
       </div>
     </>
-  );
-}
-
-function Faq() {
-  return (
-    <section id="faq" className="faq-section" aria-labelledby="faq-heading">
-      <div className="wrap faq-layout">
-        <div>
-          <span className="section-kicker">Questions</span>
-          <h2 id="faq-heading" className="display">
-            Brainspore and who is behind it.
-          </h2>
-        </div>
-        <div className="faq-list">
-          {faq.map((item) => (
-            <details key={item.question} className="faq-item">
-              <summary>{item.question}</summary>
-              <p>{item.answer}</p>
-            </details>
-          ))}
-        </div>
-      </div>
-    </section>
   );
 }
 
