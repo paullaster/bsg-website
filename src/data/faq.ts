@@ -20,9 +20,9 @@ export const faq = [
       'QSell is business management software built by Brainspore Group LLC. It runs sales, stock, finance, delivery and people in one system, and gives each business its own online storefront for customers.',
   },
   {
-    question: 'Does Brainspore work outside Nairobi?',
+    question: 'Do you work with businesses outside Kenya?',
     answer:
-      'Yes. We are based in Nairobi, Kenya, and build software for businesses across Africa. Because the work is done online, we take on projects wherever you are. Tell us where that is.',
+      'Yes. Brainspore is Kenya-based and builds software for businesses across Africa. The work is done remotely, so where your business is located is not a barrier to working with us.',
   },
   {
     question: 'How do I start a project with Brainspore?',

@@ -12,7 +12,7 @@ const actions: Record<number, { label: string; href: string; mail?: boolean }> =
   1: { label: 'About the founder', href: '#about' },
   2: { label: 'See what we build', href: '#what-we-do' },
   3: { label: 'Meet QSell', href: '#qsell' },
-  4: { label: 'Tell us where you are', href: `mailto:${EMAIL}`, mail: true },
+  4: { label: 'Tell us about your business', href: `mailto:${EMAIL}`, mail: true },
   5: { label: EMAIL, href: `mailto:${EMAIL}`, mail: true },
 };
 
