@@ -273,8 +273,9 @@ export default function Services() {
             <h2 className="display">Four things we build, and build well.</h2>
           </div>
           <p>
-            Brainspore Group LLC is a software and IT solutions company. These are the systems we
-            design, build and integrate for businesses across Africa.
+            A business runs on four things: one system for its records, work that moves without
+            being chased, finance and operations on a platform it can trust, and money that lands
+            where it should. We build all four and make them work together.
           </p>
         </header>
         <div className="svc-grid">
