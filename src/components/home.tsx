@@ -56,7 +56,7 @@ const clients = [
     city: 'Kisumu, Kenya',
     name: 'SM Engineering Limited',
     industry: 'Solar, electrical and engineering supplies',
-    text: 'An online shop for 35 products in 8 categories, from solar panels and inverters to batteries, with prices in KES and stock shown clearly.',
+    text: 'Brainspore set up their online shop on QSell, so customers can see solar panels, inverters, batteries and installation packages with live prices and stock.',
     preview: '/clients/sm-engineering-store.png',
     previewAlt:
       'The SM Engineering online shop, showing solar product categories and prices in KES',
@@ -66,7 +66,7 @@ const clients = [
     city: 'Nairobi, Kenya',
     name: 'Noels Fish Deliveries',
     industry: 'Fresh fish, farm and speciality foods',
-    text: 'An online shop for fresh and ready-to-eat fish and farm products, with pack sizes, minimum orders and order tracking.',
+    text: 'Brainspore set up their online shop on QSell for fresh and ready-to-eat products, with pack sizes, minimum orders and order tracking built in.',
     preview: '/clients/noels-fish-store.png',
     previewAlt: 'The Noels Fish Deliveries online shop, showing fresh fish and food categories',
     url: 'https://shop.noelsdeliveries.com/',
