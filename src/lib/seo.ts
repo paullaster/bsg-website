@@ -40,10 +40,10 @@ export const FOUNDER = {
 };
 
 export const SCREENSHOT = {
-  src: '/qsell/qsell-business-management-dashboard.avif',
-  width: 2286,
-  height: 1749,
-  alt: 'QSell business management software dashboard by Brainspore Group LLC, showing sales, orders, payment collections and a sidebar with sales, inventory, delivery, HR, projects, finance and approvals',
+  src: '/qsell/qsell-dashboard-overview.avif',
+  width: 618,
+  height: 372,
+  alt: 'QSell business management software by Brainspore Group LLC: a dashboard summary of sales, orders, payment collections, items needing attention and sales per day',
 };
 
 export const QSELL_FEATURES = [
@@ -146,7 +146,7 @@ export function buildJsonLd(faq: { question: string; answer: string }[]) {
     '@type': 'WebPage',
     '@id': id('webpage'),
     url: SITE_URL,
-    name: 'Brainspore Group LLC | Software & IT Solutions in Kenya',
+    name: 'Brainspore Group (BSG) | Software & IT Solutions, Kenya & East Africa',
     isPartOf: { '@id': id('website') },
     about: { '@id': id('organization') },
     inLanguage: 'en-KE',

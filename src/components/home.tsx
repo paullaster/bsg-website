@@ -4,24 +4,19 @@ import { useState } from 'react';
 import Image from 'next/image';
 
 import { faq } from '@/data/faq';
-import { SCREENSHOT } from '@/lib/seo';
+import { QSELL_FEATURES, SCREENSHOT } from '@/lib/seo';
 import {
   ArrowRight,
   ArrowUpRight,
-  Boxes,
-  Check,
+  Blocks,
   ChartNoAxesCombined,
   ChevronUp,
-  CircleDollarSign,
   ExternalLink,
-  FolderKanban,
+  Globe,
   Mail,
   Menu,
-  PackageCheck,
   ShieldCheck,
-  Truck,
-  UsersRound,
-  Handshake,
+  Wallet,
   X,
 } from 'lucide-react';
 
@@ -33,95 +28,47 @@ const socials = [
   { label: 'Facebook', href: 'https://www.facebook.com/brainsporegroup' },
 ];
 
-const qsellModules = [
+const capabilities = [
   {
-    id: 'sales',
-    icon: <Boxes size={19} strokeWidth={1.6} />,
-    title: 'Sales',
-    text: 'Orders from your online shop land in one place, and every stage of an order is timestamped, so you always know where a sale stands and who moved it last.',
+    icon: <Blocks size={20} strokeWidth={1.6} />,
+    title: 'Custom software',
+    text: 'Web applications and internal systems designed around how your business already works, not the other way round.',
   },
   {
-    id: 'customers',
-    icon: <UsersRound size={19} strokeWidth={1.6} />,
-    title: 'Customers',
-    text: 'One record per customer: what they have bought, whether they have paid, and how to reach them. No more hunting through chats and notebooks.',
+    icon: <Globe size={20} strokeWidth={1.6} />,
+    title: 'Online shops and platforms',
+    text: 'Storefronts that take orders, show real stock and prices, and let customers follow their delivery.',
   },
   {
-    id: 'inventory',
-    icon: <PackageCheck size={19} strokeWidth={1.6} />,
-    title: 'Inventory',
-    text: 'Stock by location, bundles and hampers sold as one item, and clear in-stock and sold-out states that carry straight through to the shop.',
+    icon: <Wallet size={20} strokeWidth={1.6} />,
+    title: 'Payments and integrations',
+    text: 'Connecting your software to M-Pesa and the other systems a business depends on, so money and records agree.',
   },
   {
-    id: 'projects',
-    icon: <FolderKanban size={19} strokeWidth={1.6} />,
-    title: 'Projects',
-    text: 'Plan and follow jobs from start to finish, such as installations and field work, next to the orders and money they belong to.',
-  },
-  {
-    id: 'vendors',
-    icon: <Handshake size={19} strokeWidth={1.6} />,
-    title: 'Vendors & suppliers',
-    text: 'Supplier details, purchase orders and what you owe them, in one place. Suppliers can be invited to register instead of you typing them in.',
-  },
-  {
-    id: 'finance',
-    icon: <CircleDollarSign size={19} strokeWidth={1.6} />,
-    title: 'Finance',
-    text: 'Invoices, payments collected and the ledger behind them, so the sales figure and the money in your account tell the same story.',
-  },
-  {
-    id: 'reports',
-    icon: <ChartNoAxesCombined size={19} strokeWidth={1.6} />,
-    title: 'Reports & BI',
-    text: 'Sales, orders and collections by day, week or month, compared with the previous period, with the items needing attention put first.',
-  },
-  {
-    id: 'delivery',
-    icon: <Truck size={19} strokeWidth={1.6} />,
-    title: 'Delivery & logistics',
-    text: 'Delivery zones, riders and couriers, and customers who can track their own order instead of calling you to ask.',
-  },
-  {
-    id: 'people',
-    icon: <ShieldCheck size={19} strokeWidth={1.6} />,
-    title: 'Users & employees',
-    text: 'Staff accounts with roles, so each person sees and does only what their job needs, and approvals go to the right desk.',
+    icon: <ShieldCheck size={20} strokeWidth={1.6} />,
+    title: 'IT solutions and support',
+    text: 'Setup, deployment and ongoing support, so what we build keeps running after launch day.',
   },
 ];
 
 const clients = [
   {
-    number: '01',
     city: 'Kisumu, Kenya',
     name: 'SM Engineering Limited',
-    industry: 'Solar · Electrical · Engineering',
-    catalog: '35',
-    catalogLabel: 'products in 8 categories',
+    industry: 'Solar, electrical and engineering supplies',
+    text: 'An online shop for 35 products in 8 categories, from solar panels and inverters to batteries, with prices in KES and stock shown clearly.',
     preview: '/clients/sm-engineering-store.png',
     previewAlt:
       'The SM Engineering online shop, showing solar product categories and prices in KES',
-    points: [
-      'Solar packages sold as one item, some with free delivery and installation countrywide.',
-      'Customers filter by price and by what is actually in stock.',
-      'Prices in KES, with sold-out items marked clearly.',
-    ],
     url: 'https://shop.smsolar.co.ke/',
   },
   {
-    number: '02',
     city: 'Nairobi, Kenya',
     name: 'Noels Fish Deliveries',
-    industry: 'Fresh fish · Farm · Speciality',
-    catalog: '17',
-    catalogLabel: 'products in 3 categories',
+    industry: 'Fresh fish, farm and speciality foods',
+    text: 'An online shop for fresh and ready-to-eat fish and farm products, with pack sizes, minimum orders and order tracking.',
     preview: '/clients/noels-fish-store.png',
     previewAlt: 'The Noels Fish Deliveries online shop, showing fresh fish and food categories',
-    points: [
-      'Pack sizes and minimum order quantities for items sold by the piece.',
-      'Fresh and ready-to-eat products in one shop.',
-      'Customers track their order from the shop.',
-    ],
     url: 'https://shop.noelsdeliveries.com/',
   },
 ];
@@ -146,8 +93,8 @@ function Header() {
       <div className="wrap nav-inner">
         <Brand />
         <nav className="nav-links" aria-label="Main navigation">
-          <a href="#solutions">Solutions</a>
-          <a href="#production">In production</a>
+          <a href="#what-we-do">What we do</a>
+          <a href="#qsell">QSell</a>
           <a href="#about">About</a>
         </nav>
         <a className="nav-cta" href="#contact">
@@ -166,11 +113,11 @@ function Header() {
       </div>
       {open && (
         <nav id="mobile-navigation" className="mobile-nav" aria-label="Mobile navigation">
-          <a href="#solutions" onClick={close}>
-            Solutions
+          <a href="#what-we-do" onClick={close}>
+            What we do
           </a>
-          <a href="#production" onClick={close}>
-            In production
+          <a href="#qsell" onClick={close}>
+            QSell
           </a>
           <a href="#about" onClick={close}>
             About
@@ -195,7 +142,7 @@ function HeroArt() {
         <Image src="/brainspore-logo.jpg" alt="Brainspore symbol" width={106} height={106} />
       </div>
       <div className="orbit-node node-top">
-        <Boxes size={14} /> Software
+        <Blocks size={14} /> Software
       </div>
       <div className="orbit-node node-left">
         <ShieldCheck size={14} /> IT solutions
@@ -219,13 +166,12 @@ function Hero() {
             </h1>
             <p className="hero-lede">
               Brainspore Group LLC (BSG) is a software company in Nairobi. We design, build and run
-              business software for companies that buy, stock, sell and deliver across Kenya, East
-              Africa and Africa. Our flagship solution, QSell, brings the whole operation into one
-              system.
+              software for businesses across Kenya, East Africa and Africa. Our core solution is
+              QSell, business management software we built ourselves.
             </p>
             <div className="hero-actions">
-              <a className="button-primary" href="#solutions">
-                See our solutions <ArrowRight size={15} />
+              <a className="button-primary" href="#what-we-do">
+                What we do <ArrowRight size={15} />
               </a>
               <a className="text-link" href="#contact">
                 Talk to us <ArrowUpRight size={14} />
@@ -249,7 +195,7 @@ function Hero() {
           </div>
           <div className="proof-item">
             <span className="proof-value">QSell</span>
-            <span className="proof-label">our flagship, live with clients</span>
+            <span className="proof-label">our core solution, live with clients</span>
           </div>
         </div>
       </div>
@@ -257,73 +203,53 @@ function Hero() {
   );
 }
 
-function QSellModules() {
-  const [selectedModule, setSelectedModule] = useState('sales');
-  const activeIndex = Math.max(
-    0,
-    qsellModules.findIndex((item) => item.id === selectedModule),
-  );
-  const activeModule = qsellModules[activeIndex];
-
+function WhatWeDo() {
   return (
-    <section className="module-explorer" aria-labelledby="module-heading">
-      <div className="module-explorer-intro">
-        <div>
-          <span className="section-kicker">What is inside</span>
-          <h3 id="module-heading">Nine modules that share one set of books.</h3>
+    <section id="what-we-do" className="section">
+      <div className="wrap">
+        <div className="section-head">
+          <div>
+            <span className="section-kicker">What Brainspore does</span>
+            <h2 className="section-title display">Software that businesses can depend on.</h2>
+          </div>
+          <p className="section-intro">
+            We build and look after the software behind how a business sells, stocks, pays and
+            delivers. We like plain answers, working systems and clients who can call us after
+            launch.
+          </p>
         </div>
-        <p>
-          Because everything lives in one system, a sale updates stock, money and delivery without
-          anyone retyping it. Pick a module to see what it does.
-        </p>
-      </div>
-      <div className="module-explorer-content">
-        <div className="module-selector" role="group" aria-label="QSell modules">
-          {qsellModules.map((module, index) => (
-            <button
-              type="button"
-              className="module-option"
-              key={module.id}
-              aria-pressed={selectedModule === module.id}
-              onClick={() => setSelectedModule(module.id)}
-            >
-              <span className="module-option-icon">{module.icon}</span>
-              <span className="module-option-name">{module.title}</span>
-              <span className="module-option-index">0{index + 1}</span>
-            </button>
+        <div className="capability-grid">
+          {capabilities.map((item) => (
+            <article className="capability" key={item.title}>
+              <div className="capability-icon">{item.icon}</div>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
           ))}
-        </div>
-        <div className="module-detail" aria-live="polite">
-          <span className="module-detail-label">QSell module</span>
-          <div className="module-detail-icon">{activeModule.icon}</div>
-          <h4>{activeModule.title}</h4>
-          <p>{activeModule.text}</p>
-          <span className="module-detail-count">
-            Module {String(activeIndex + 1).padStart(2, '0')} /{' '}
-            {String(qsellModules.length).padStart(2, '0')}
-          </span>
         </div>
       </div>
     </section>
   );
 }
 
-function Solutions() {
+function QSell() {
   return (
-    <section id="solutions" className="section platform-section">
-      <div className="wrap">
-        <div className="section-head">
-          <div>
-            <span className="section-kicker">Our solution</span>
-            <h2 className="section-title display">QSell. One system to run the business.</h2>
-          </div>
-          <p className="section-intro">
-            We built QSell for businesses that sell, stock, buy and deliver. It replaces the
-            spreadsheet, the notebook and the three separate apps with one system your whole team
-            works in.
+    <section id="qsell" className="section platform-section">
+      <div className="wrap qsell-feature">
+        <div className="qsell-copy">
+          <span className="section-kicker">Our core solution</span>
+          <h2 className="display">QSell business management software.</h2>
+          <p>
+            QSell is the system we built to run a trading business in one place: sales, stock,
+            suppliers, money, delivery and people, with an online shop for customers. Brainspore
+            builds it, sets it up and supports it.
           </p>
+          <ul className="chips" aria-label="What QSell covers">
+            {QSELL_FEATURES.map((feature) => (
+              <li key={feature}>{feature}</li>
+            ))}
+          </ul>
         </div>
-
         <figure className="console">
           <div className="console-bar" aria-hidden="true">
             <span />
@@ -337,76 +263,31 @@ function Solutions() {
             alt={SCREENSHOT.alt}
             width={SCREENSHOT.width}
             height={SCREENSHOT.height}
-            sizes="(max-width: 1180px) 100vw, 1180px"
-            quality={90}
+            unoptimized
           />
-          <figcaption className="console-caption">
-            <span>
-              <strong>It tells you the day in plain words.</strong> What you sold, what you
-              collected, and what needs you, before you read a single chart.
-            </span>
-            <span className="console-tag">QSell admin console</span>
-          </figcaption>
         </figure>
-
-        <QSellModules />
-
-        <div className="storefront">
-          <div className="storefront-copy">
-            <span className="section-kicker">The storefront</span>
-            <h3>Your shop, under your name and your web address.</h3>
-            <p>
-              Every QSell business gets its own online shop. Customers browse categories, filter by
-              price and by what is in stock, save products, check out, and track their order. What
-              they buy goes straight into your stock, sales and delivery, with nothing to copy over
-              by hand.
-            </p>
-          </div>
-          <ul className="storefront-list">
-            <li>
-              <Check size={15} />
-              <span>Branded to the business, on its own web address</span>
-            </li>
-            <li>
-              <Check size={15} />
-              <span>Price, stock and sort filters that customers actually use</span>
-            </li>
-            <li>
-              <Check size={15} />
-              <span>Customer accounts, saved products and order tracking</span>
-            </li>
-            <li>
-              <Check size={15} />
-              <span>Pack sizes and minimum order quantities where products need them</span>
-            </li>
-          </ul>
-        </div>
       </div>
     </section>
   );
 }
 
-function Production() {
+function Clients() {
   return (
-    <section id="production" className="deployments">
+    <section id="clients" className="deployments">
       <div className="wrap">
         <div className="section-head">
           <div>
-            <span className="section-kicker">In production</span>
-            <h2 className="section-title display">Businesses running on QSell today.</h2>
+            <span className="section-kicker">In use today</span>
+            <h2 className="section-title display">Businesses running on QSell.</h2>
           </div>
           <p className="section-intro">
-            Two very different businesses, a solar and electrical supplier and a fresh fish
-            delivery, running their shops on the same system.
+            Two very different businesses, one solar and electrical supplier and one fresh fish
+            delivery, run their online shops on QSell.
           </p>
         </div>
         <div className="deployment-grid">
           {clients.map((store) => (
-            <article className="deployment-card" key={store.number}>
-              <div className="deployment-top">
-                <span className="deployment-number">QSELL CLIENT / {store.number}</span>
-                <ArrowUpRight size={17} color="var(--terracotta)" aria-hidden="true" />
-              </div>
+            <article className="deployment-card" key={store.name}>
               <a
                 className="deployment-preview"
                 href={store.url}
@@ -427,18 +308,7 @@ function Production() {
               <div className="deployment-city">{store.city}</div>
               <h3>{store.name}</h3>
               <p className="deployment-sub">{store.industry}</p>
-              <div className="catalog-count">
-                <strong>{store.catalog}</strong>
-                <span>{store.catalogLabel}</span>
-              </div>
-              <ul className="deployment-features">
-                {store.points.map((point) => (
-                  <li key={point}>
-                    <Check size={14} />
-                    <span>{point}</span>
-                  </li>
-                ))}
-              </ul>
+              <p className="deployment-text">{store.text}</p>
               <div className="deployment-footer">
                 <a className="text-link" href={store.url} target="_blank" rel="noreferrer">
                   Visit the shop <ExternalLink size={14} />
@@ -559,8 +429,9 @@ function Home() {
       <Header />
       <main>
         <Hero />
-        <Solutions />
-        <Production />
+        <WhatWeDo />
+        <QSell />
+        <Clients />
         <About />
         <Faq />
         <Contact />

@@ -14,7 +14,7 @@ const dmMono = DM_Mono({
   display: 'swap',
 });
 
-const title = 'Brainspore Group LLC | Software & IT Solutions in Kenya';
+const title = 'Brainspore Group (BSG) | Software & IT Solutions, Kenya & East Africa';
 const description =
   'Brainspore Group LLC (BSG) is a Nairobi software and IT solutions company serving Kenya, East Africa and Africa. Maker of QSell business management software. Founded by Paullaster Okoth.';
 
