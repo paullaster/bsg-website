@@ -273,9 +273,9 @@ export default function Services() {
             <h2 className="display">Four things we build, and build well.</h2>
           </div>
           <p>
-            A business runs on four things: one system for its records, work that moves without
-            being chased, finance and operations on a platform it can trust, and money that lands
-            where it should. We build all four and make them work together.
+            Every business depends on four things: records it can trust, work that moves without
+            being chased, finance and operations that add up, and money that reaches the right
+            place.
           </p>
         </header>
         <div className="svc-grid">
