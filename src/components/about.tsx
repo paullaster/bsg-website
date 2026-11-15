@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import type { CSSProperties } from 'react';
 import { ArrowUpRight, Check, Landmark, Smartphone, Wallet } from 'lucide-react';
 
@@ -62,6 +62,78 @@ const projects = [
     text: 'The internal portal an organisation’s staff work in every day.',
   },
 ];
+
+function FounderGlance() {
+  const [index, setIndex] = useState(0);
+  const [paused, setPaused] = useState(false);
+
+  useEffect(() => {
+    if (paused) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const id = window.setTimeout(() => setIndex((value) => (value + 1) % projects.length), 3800);
+    return () => window.clearTimeout(id);
+  }, [paused, index]);
+
+  return (
+    <div
+      className={`abt-glance abt-reveal${paused ? ' paused' : ''}`}
+      style={{ '--i': index } as CSSProperties}
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+      onFocus={() => setPaused(true)}
+      onBlur={() => setPaused(false)}
+    >
+      <div className="abt-glance-bg" aria-hidden="true" />
+      <div className="abt-founder">
+        <div className="abt-monogram" aria-hidden="true">
+          <span>PO</span>
+        </div>
+        <div>
+          <span className="abt-role">Founder and lead engineer</span>
+          <strong>Paullaster Okoth</strong>
+          <small>8 years building production software</small>
+        </div>
+      </div>
+
+      <div className="abt-glance-reel">
+        <span className="abt-glance-label">Delivered by Paullaster for</span>
+        <div className="abt-window" aria-hidden="true">
+          <div className="abt-track">
+            {projects.map((item) => (
+              <div className="abt-slide" key={item.org}>
+                <strong>{item.org}</strong>
+                <span>{item.system}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="abt-steps" role="group" aria-label="Systems Paullaster delivered">
+          {projects.map((item, i) => (
+            <button
+              key={item.org}
+              type="button"
+              className={`abt-step${i === index ? ' on' : ''}`}
+              aria-label={`${item.org}: ${item.system}`}
+              aria-pressed={i === index}
+              onClick={() => setIndex(i)}
+            >
+              <i />
+            </button>
+          ))}
+        </div>
+        <ul className="sr-only">
+          {projects.map((item) => (
+            <li key={item.org}>
+              {item.org}: {item.system}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <p className="abt-glance-note">Places where records, money and access have to be right.</p>
+    </div>
+  );
+}
 
 export default function About() {
   const ref = useRef<HTMLElement>(null);
@@ -138,38 +210,7 @@ export default function About() {
           </div>
         </div>
 
-        <div className="abt-record abt-reveal">
-          <div className="abt-record-head">
-            <div className="abt-founder">
-              <div className="abt-monogram" aria-hidden="true">
-                <span>PO</span>
-              </div>
-              <div>
-                <span className="abt-role">Founder and lead engineer</span>
-                <strong>Paullaster Okoth</strong>
-              </div>
-            </div>
-            <p className="abt-record-claim">
-              8 years building production software. Institutions run on systems Paullaster
-              delivered:
-            </p>
-          </div>
-          <ul className="abt-projects">
-            {projects.map((item, i) => (
-              <li className="abt-project" key={item.org}>
-                <span className="abt-project-num">{String(i + 1).padStart(2, '0')}</span>
-                <strong>{item.org}</strong>
-                <span className="abt-project-system">{item.system}</span>
-                <p>{item.text}</p>
-              </li>
-            ))}
-          </ul>
-          <p className="abt-record-foot">
-            Regulators, professional bodies, national funds and global organisations: places where
-            records, money and access have to be right. That is the standard Paullaster brought to
-            Brainspore.
-          </p>
-        </div>
+        <FounderGlance />
 
         <ul className="abt-standards">
           {standards.map((item, i) => (
