@@ -9,7 +9,6 @@ import {
   ArrowRight,
   ArrowUpRight,
   Blocks,
-  ChartNoAxesCombined,
   ChevronUp,
   ExternalLink,
   Globe,
@@ -56,7 +55,6 @@ const clients = [
     city: 'Kisumu, Kenya',
     name: 'SM Engineering Limited',
     industry: 'Solar, electrical and engineering supplies',
-    text: 'Brainspore set up their online shop on QSell, so customers can see solar panels, inverters, batteries and installation packages with live prices and stock.',
     preview: '/clients/sm-engineering-store.png',
     previewAlt:
       'The SM Engineering online shop, showing solar product categories and prices in KES',
@@ -66,7 +64,6 @@ const clients = [
     city: 'Nairobi, Kenya',
     name: 'Noels Fish Deliveries',
     industry: 'Fresh fish, farm and speciality foods',
-    text: 'Brainspore set up their online shop on QSell for fresh and ready-to-eat products, with pack sizes, minimum orders and order tracking built in.',
     preview: '/clients/noels-fish-store.png',
     previewAlt: 'The Noels Fish Deliveries online shop, showing fresh fish and food categories',
     url: 'https://shop.noelsdeliveries.com/',
@@ -131,75 +128,32 @@ function Header() {
   );
 }
 
-function HeroArt() {
-  return (
-    <div className="hero-art" aria-label="Brainspore: software, IT solutions and QSell">
-      <div className="orbit" aria-hidden="true" />
-      <div className="orbital-line" aria-hidden="true" />
-      <span className="orbit-tick tick-a" aria-hidden="true" />
-      <span className="orbit-tick tick-b" aria-hidden="true" />
-      <div className="center-mark">
-        <Image src="/brainspore-logo.jpg" alt="Brainspore symbol" width={106} height={106} />
-      </div>
-      <div className="orbit-node node-top">
-        <Blocks size={14} /> Software
-      </div>
-      <div className="orbit-node node-left">
-        <ShieldCheck size={14} /> IT solutions
-      </div>
-      <div className="orbit-node node-bottom">
-        <ChartNoAxesCombined size={14} /> QSell
-      </div>
-    </div>
-  );
-}
-
 function Hero() {
   return (
-    <>
-      <section className="hero">
-        <div className="wrap hero-grid">
-          <div className="hero-copy">
-            <span className="eyebrow">Software &amp; IT company · Nairobi, Kenya</span>
-            <h1 className="display">
-              Software and IT solutions for businesses in <em>Kenya and East Africa.</em>
-            </h1>
-            <p className="hero-lede">
-              Brainspore Group LLC (BSG) is a software company in Nairobi. We design, build and run
-              software for businesses across Kenya, East Africa and Africa. Our core solution is
-              QSell, business management software we built ourselves.
-            </p>
-            <div className="hero-actions">
-              <a className="button-primary" href="#what-we-do">
-                What we do <ArrowRight size={15} />
-              </a>
-              <a className="text-link" href="#contact">
-                Talk to us <ArrowUpRight size={14} />
-              </a>
-            </div>
-            <div className="hero-note">Brainspore Group LLC · Nairobi, Kenya</div>
-          </div>
-          <HeroArt />
-        </div>
-      </section>
-      <div className="proof-strip">
-        <div className="wrap proof-grid">
-          <div className="proof-intro">Brainspore Group LLC</div>
-          <div className="proof-item">
-            <span className="proof-value">8 years</span>
-            <span className="proof-label">building production software</span>
-          </div>
-          <div className="proof-item">
-            <span className="proof-value">Nairobi</span>
-            <span className="proof-label">where we are based and build</span>
-          </div>
-          <div className="proof-item">
-            <span className="proof-value">QSell</span>
-            <span className="proof-label">our core solution, live with clients</span>
+    <section className="hero">
+      <div className="wrap hero-grid">
+        <div className="hero-copy">
+          <span className="eyebrow">Software &amp; IT company · Nairobi, Kenya</span>
+          <h1 className="display">
+            Software and IT solutions for businesses in <em>Kenya and East Africa.</em>
+          </h1>
+          <p className="hero-lede">
+            Brainspore Group LLC (BSG) is a software company in Nairobi with 8 years of experience
+            building production software. We design, build and run software for businesses across
+            Kenya, East Africa and Africa. Our core solution is QSell, business management software
+            we built ourselves.
+          </p>
+          <div className="hero-actions">
+            <a className="button-primary" href="#what-we-do">
+              What we do <ArrowRight size={15} />
+            </a>
+            <a className="text-link" href="#contact">
+              Talk to us <ArrowUpRight size={14} />
+            </a>
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
 }
 
@@ -252,9 +206,6 @@ function QSell() {
         </div>
         <figure className="console">
           <div className="console-bar" aria-hidden="true">
-            <span />
-            <span />
-            <span />
             <b>QSell admin console</b>
           </div>
           <Image
@@ -308,7 +259,6 @@ function Clients() {
               <div className="deployment-city">{store.city}</div>
               <h3>{store.name}</h3>
               <p className="deployment-sub">{store.industry}</p>
-              <p className="deployment-text">{store.text}</p>
               <div className="deployment-footer">
                 <a className="text-link" href={store.url} target="_blank" rel="noreferrer">
                   Visit the shop <ExternalLink size={14} />
