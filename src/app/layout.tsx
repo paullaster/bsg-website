@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { DM_Mono, DM_Sans, Manrope } from 'next/font/google';
 
-import { KEYWORDS, ORG, SITE_URL } from '@/lib/seo';
+import { DESCRIPTION, KEYWORDS, ORG, SITE_URL, TITLE } from '@/lib/seo';
 
 import './globals.css';
 
@@ -14,9 +14,8 @@ const dmMono = DM_Mono({
   display: 'swap',
 });
 
-const title = 'Brainspore Group (BSG) | Software & IT Solutions, Kenya & East Africa';
-const description =
-  'Brainspore Group LLC (BSG) is a Nairobi software and IT solutions company serving Kenya, East Africa and Africa. Maker of QSell business management software. Founded by Paullaster Okoth.';
+const title = TITLE;
+const description = DESCRIPTION;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

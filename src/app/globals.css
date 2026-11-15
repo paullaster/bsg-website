@@ -352,90 +352,6 @@
 .platform-section {
   background: rgba(215, 149, 51, 0.09);
 }
-.deployments {
-  padding: 120px 0 128px;
-}
-.deployment-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 22px;
-}
-.deployment-card {
-  position: relative;
-  border: 1px solid var(--line);
-  background: rgba(239, 240, 238, 0.55);
-  padding: 30px;
-  min-height: 400px;
-  display: flex;
-  flex-direction: column;
-  transition:
-    transform 0.3s,
-    box-shadow 0.3s;
-}
-.deployment-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow);
-}
-.deployment-preview {
-  position: relative;
-  display: block;
-  height: 190px;
-  margin: 21px 0 2px;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  background: var(--paper);
-}
-.deployment-preview img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
-}
-.deployment-preview span {
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  padding: 7px 9px;
-  background: var(--paper);
-  color: var(--burgundy);
-  font: 9px var(--app-font-mono);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-.deployment-city {
-  margin-top: 17px;
-  color: var(--terracotta);
-  font: 10px var(--app-font-mono);
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-}
-.deployment-card h3 {
-  margin: 8px 0;
-  color: var(--burgundy);
-  font: 700 clamp(25px, 3vw, 34px)/1.05 var(--app-font-serif);
-  letter-spacing: -0.05em;
-}
-.deployment-sub {
-  margin: 0;
-  color: var(--muted-ink);
-  font-size: 12px;
-}
-.deployment-footer {
-  margin-top: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  padding-top: 12px;
-}
-.deployment-footer .text-link {
-  border-bottom: 1px solid rgba(95, 17, 22, 0.25);
-  padding-bottom: 5px;
-}
 .contact-section {
   padding: 110px 0;
   background: var(--gold);
@@ -699,21 +615,6 @@
   font-size: 15px;
   line-height: 1.8;
 }
-.chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 26px 0 0;
-  padding: 0;
-  list-style: none;
-}
-.chips li {
-  padding: 7px 11px;
-  border: 1px solid var(--line);
-  background: var(--paper);
-  color: var(--burgundy);
-  font: 500 11px var(--app-font-sans);
-}
 @media (max-width: 1100px) {
   .capability-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -837,20 +738,6 @@
   }
   .section-title {
     font-size: clamp(39px, 10vw, 54px);
-  }
-  .deployment-grid {
-    grid-template-columns: 1fr;
-    gap: 14px;
-  }
-  .deployment-card {
-    padding: 23px;
-    min-height: 0;
-  }
-  .deployment-card h3 {
-    font-size: 29px;
-  }
-  .deployment-preview {
-    height: 170px;
   }
   .contact-section {
     padding: 76px 0;

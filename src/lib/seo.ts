@@ -46,16 +46,15 @@ export const SCREENSHOT = {
   alt: 'QSell business management software by Brainspore Group LLC: a dashboard summary of sales, orders, payment collections, items needing attention and sales per day',
 };
 
-export const QSELL_FEATURES = [
-  'Sales and online storefront',
-  'Customer management',
-  'Inventory management',
-  'Project management',
-  'Vendor and supplier management',
-  'Finance and invoicing',
-  'Reports and business intelligence',
-  'Delivery and logistics',
-  'User and employee management',
+export const TITLE = 'Brainspore Group (BSG) | Software & IT Solutions, ERP & Fintech in Kenya';
+export const DESCRIPTION =
+  'Brainspore Group LLC (BSG) is a Nairobi software and IT solutions company. Custom ERP, automations, Microsoft Dynamics 365 Business Central, and payment and fintech integrations for Kenya and East Africa. Maker of QSell. Founded by Paullaster Okoth.';
+
+export const SERVICES = [
+  'Custom ERP solutions',
+  'Automations',
+  'Microsoft Dynamics 365 Business Central',
+  'Payment and fintech solutions and integrations',
 ];
 
 export const KEYWORDS = [
@@ -72,10 +71,14 @@ export const KEYWORDS = [
   'IT solutions East Africa',
   'software companies in Africa',
   'IT solutions Africa',
-  'business management software Kenya',
+  'custom ERP solutions Kenya',
+  'ERP software company Kenya',
+  'business automation Kenya',
+  'Microsoft Dynamics 365 Business Central Kenya',
+  'payment integration Kenya',
+  'fintech solutions Kenya',
+  'M-Pesa integration',
   'QSell',
-  'inventory management software Kenya',
-  'online shop software Kenya',
 ];
 
 const id = (fragment: string) => `${SITE_URL}/#${fragment}`;
@@ -91,7 +94,7 @@ export function buildJsonLd(faq: { question: string; answer: string }[]) {
     logo: { '@type': 'ImageObject', url: ORG.logo, width: 256, height: 256 },
     image: `${SITE_URL}/opengraph-image`,
     description:
-      'Brainspore Group LLC (BSG) is a software and IT solutions company in Nairobi, Kenya. It builds business systems for companies in Kenya, East Africa and Africa, and is the maker of QSell business management software.',
+      'Brainspore Group LLC (BSG) is a software and IT solutions company in Nairobi, Kenya. It builds custom ERP solutions, automations, Microsoft Dynamics 365 Business Central solutions, and payment and fintech solutions and integrations for businesses in Kenya and East Africa. It also makes QSell business management software.',
     email: ORG.email,
     address: { '@type': 'PostalAddress', addressLocality: ORG.city, addressCountry: ORG.country },
     areaServed: [
@@ -102,11 +105,16 @@ export function buildJsonLd(faq: { question: string; answer: string }[]) {
     knowsAbout: [
       'Software development',
       'IT solutions',
-      'Business management software',
-      'E-commerce',
-      'Inventory management',
-      'Point of sale and sales management',
+      'ERP systems',
+      'Business process automation',
+      'Microsoft Dynamics 365 Business Central',
+      'Payment systems and fintech',
+      'M-Pesa integration',
     ],
+    makesOffer: SERVICES.map((name) => ({
+      '@type': 'Offer',
+      itemOffered: { '@type': 'Service', name, provider: { '@id': id('organization') } },
+    })),
     founder: { '@id': id('founder') },
     brand: { '@type': 'Brand', name: 'QSell' },
     contactPoint: {
@@ -146,7 +154,8 @@ export function buildJsonLd(faq: { question: string; answer: string }[]) {
     '@type': 'WebPage',
     '@id': id('webpage'),
     url: SITE_URL,
-    name: 'Brainspore Group (BSG) | Software & IT Solutions, Kenya & East Africa',
+    name: TITLE,
+    description: DESCRIPTION,
     isPartOf: { '@id': id('website') },
     about: { '@id': id('organization') },
     inLanguage: 'en-KE',
@@ -162,8 +171,7 @@ export function buildJsonLd(faq: { question: string; answer: string }[]) {
     applicationSubCategory: 'Business management, e-commerce, inventory and accounting software',
     operatingSystem: 'Web',
     description:
-      'QSell is business management software by Brainspore Group LLC. It runs sales, customers, inventory, projects, vendors, finance, reports and BI, delivery and logistics, and users and employees in one system, with an online storefront for each business.',
-    featureList: QSELL_FEATURES,
+      'QSell is business management software built by Brainspore Group LLC. It runs sales, stock, finance, delivery and people in one system, and gives each business its own online storefront for customers.',
     screenshot: {
       '@type': 'ImageObject',
       url: `${SITE_URL}${SCREENSHOT.src}`,

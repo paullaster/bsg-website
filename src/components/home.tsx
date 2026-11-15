@@ -4,18 +4,17 @@ import { useState } from 'react';
 import Image from 'next/image';
 
 import { faq } from '@/data/faq';
-import { QSELL_FEATURES, SCREENSHOT } from '@/lib/seo';
+import { SCREENSHOT } from '@/lib/seo';
 import {
   ArrowRight,
   ArrowUpRight,
   Blocks,
   ChevronUp,
-  ExternalLink,
-  Globe,
+  LayoutDashboard,
   Mail,
   Menu,
-  ShieldCheck,
   Wallet,
+  Workflow,
   X,
 } from 'lucide-react';
 
@@ -27,46 +26,26 @@ const socials = [
   { label: 'Facebook', href: 'https://www.facebook.com/brainsporegroup' },
 ];
 
-const capabilities = [
+const services = [
   {
     icon: <Blocks size={20} strokeWidth={1.6} />,
-    title: 'Custom software',
-    text: 'Web applications and internal systems designed around how your business already works, not the other way round.',
+    title: 'Custom ERP solutions',
+    text: 'One system for sales, stock, purchasing, finance and people, built around how your business actually runs instead of forcing you into someone else’s process.',
   },
   {
-    icon: <Globe size={20} strokeWidth={1.6} />,
-    title: 'Online shops and platforms',
-    text: 'Storefronts that take orders, show real stock and prices, and let customers follow their delivery.',
+    icon: <Workflow size={20} strokeWidth={1.6} />,
+    title: 'Automations',
+    text: 'We replace repeated manual work, such as re-keying orders, chasing approvals and reconciling spreadsheets, with workflows that run on their own.',
+  },
+  {
+    icon: <LayoutDashboard size={20} strokeWidth={1.6} />,
+    title: 'Microsoft Dynamics 365 Business Central',
+    text: 'Setup, customisation and integration of Business Central, so it fits your finance, inventory and operations and connects to the other systems you use.',
   },
   {
     icon: <Wallet size={20} strokeWidth={1.6} />,
-    title: 'Payments and integrations',
-    text: 'Connecting your software to M-Pesa and the other systems a business depends on, so money and records agree.',
-  },
-  {
-    icon: <ShieldCheck size={20} strokeWidth={1.6} />,
-    title: 'IT solutions and support',
-    text: 'Setup, deployment and ongoing support, so what we build keeps running after launch day.',
-  },
-];
-
-const clients = [
-  {
-    city: 'Kisumu, Kenya',
-    name: 'SM Engineering Limited',
-    industry: 'Solar, electrical and engineering supplies',
-    preview: '/clients/sm-engineering-store.png',
-    previewAlt:
-      'The SM Engineering online shop, showing solar product categories and prices in KES',
-    url: 'https://shop.smsolar.co.ke/',
-  },
-  {
-    city: 'Nairobi, Kenya',
-    name: 'Noels Fish Deliveries',
-    industry: 'Fresh fish, farm and speciality foods',
-    preview: '/clients/noels-fish-store.png',
-    previewAlt: 'The Noels Fish Deliveries online shop, showing fresh fish and food categories',
-    url: 'https://shop.noelsdeliveries.com/',
+    title: 'Payment and fintech solutions',
+    text: 'Payment collection, wallets and integrations with M-Pesa and other payment providers, built so that money and records always agree.',
   },
 ];
 
@@ -138,10 +117,10 @@ function Hero() {
             Software and IT solutions for businesses in <em>Kenya and East Africa.</em>
           </h1>
           <p className="hero-lede">
-            Brainspore Group LLC (BSG) is a software company in Nairobi with 8 years of experience
-            building production software. We design, build and run software for businesses across
-            Kenya, East Africa and Africa. Our core solution is QSell, business management software
-            we built ourselves.
+            Brainspore Group LLC (BSG) builds custom ERP systems, automations, Microsoft Dynamics
+            365 Business Central solutions, and payment and fintech integrations. We are a Nairobi
+            software company with 8 years of experience building production software, and we also
+            make our own product, QSell.
           </p>
           <div className="hero-actions">
             <a className="button-primary" href="#what-we-do">
@@ -164,16 +143,15 @@ function WhatWeDo() {
         <div className="section-head">
           <div>
             <span className="section-kicker">What Brainspore does</span>
-            <h2 className="section-title display">Software that businesses can depend on.</h2>
+            <h2 className="section-title display">Four things we build, and build well.</h2>
           </div>
           <p className="section-intro">
-            We build and look after the software behind how a business sells, stocks, pays and
-            delivers. We like plain answers, working systems and clients who can call us after
-            launch.
+            Brainspore Group LLC is a software and IT solutions company. These are the systems we
+            design, build and integrate for businesses in Kenya and East Africa.
           </p>
         </div>
         <div className="capability-grid">
-          {capabilities.map((item) => (
+          {services.map((item) => (
             <article className="capability" key={item.title}>
               <div className="capability-icon">{item.icon}</div>
               <h3>{item.title}</h3>
@@ -191,18 +169,13 @@ function QSell() {
     <section id="qsell" className="section platform-section">
       <div className="wrap qsell-feature">
         <div className="qsell-copy">
-          <span className="section-kicker">Our core solution</span>
-          <h2 className="display">QSell business management software.</h2>
+          <span className="section-kicker">Our own solution</span>
+          <h2 className="display">QSell.</h2>
           <p>
-            QSell is the system we built to run a trading business in one place: sales, stock,
-            suppliers, money, delivery and people, with an online shop for customers. Brainspore
-            builds it, sets it up and supports it.
+            QSell is the business management software Brainspore has built. It runs sales, stock,
+            finance, delivery and people in one system, and gives each business its own online
+            storefront for customers.
           </p>
-          <ul className="chips" aria-label="What QSell covers">
-            {QSELL_FEATURES.map((feature) => (
-              <li key={feature}>{feature}</li>
-            ))}
-          </ul>
         </div>
         <figure className="console">
           <div className="console-bar" aria-hidden="true">
@@ -222,69 +195,20 @@ function QSell() {
   );
 }
 
-function Clients() {
-  return (
-    <section id="clients" className="deployments">
-      <div className="wrap">
-        <div className="section-head">
-          <div>
-            <span className="section-kicker">In use today</span>
-            <h2 className="section-title display">Businesses running on QSell.</h2>
-          </div>
-          <p className="section-intro">
-            Two very different businesses, one solar and electrical supplier and one fresh fish
-            delivery, run their online shops on QSell.
-          </p>
-        </div>
-        <div className="deployment-grid">
-          {clients.map((store) => (
-            <article className="deployment-card" key={store.name}>
-              <a
-                className="deployment-preview"
-                href={store.url}
-                target="_blank"
-                rel="noreferrer"
-                aria-label={`Visit the ${store.name} online shop`}
-              >
-                <Image
-                  src={store.preview}
-                  alt={store.previewAlt}
-                  fill
-                  sizes="(max-width: 700px) 100vw, 560px"
-                />
-                <span>
-                  Live shop <ExternalLink size={12} />
-                </span>
-              </a>
-              <div className="deployment-city">{store.city}</div>
-              <h3>{store.name}</h3>
-              <p className="deployment-sub">{store.industry}</p>
-              <div className="deployment-footer">
-                <a className="text-link" href={store.url} target="_blank" rel="noreferrer">
-                  Visit the shop <ExternalLink size={14} />
-                </a>
-              </div>
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
 function About() {
   return (
     <section id="about" className="group-section">
       <div className="wrap group-layout">
         <div className="group-heading">
           <span className="section-kicker">About Brainspore</span>
-          <h2 className="display">Built to be used on a busy Tuesday, not just demoed.</h2>
+          <h2 className="display">Built to run in production, not just to demo.</h2>
         </div>
         <div className="group-copy">
           <p>
-            Brainspore Group LLC is a software and IT company in Nairobi. We build business systems
-            for people who trade, stock and deliver, and we care about the unglamorous part: that
-            your team can set it up, understand it, and still rely on it when the day gets busy.
+            Brainspore Group LLC is a software and IT solutions company in Nairobi. We build ERP
+            systems, automations and payment solutions for businesses in Kenya and East Africa. We
+            also build our own product, and creating QSell from the ledger to the online storefront
+            is how we know what it takes to run business software in production.
           </p>
           <div className="founder">
             <span className="founder-label">Founder</span>
@@ -292,8 +216,7 @@ function About() {
             <p>
               Paullaster founded Brainspore and leads its engineering. With 8 years of full-stack
               experience in Node.js, React and MongoDB, plus Python and machine learning, Paullaster
-              has built payment integrations, wallet services and business platforms for businesses
-              in Kenya. QSell is the result of that work.
+              has built payment integrations, wallet services and business platforms in Kenya.
             </p>
           </div>
         </div>
@@ -309,7 +232,7 @@ function Faq() {
         <div>
           <span className="section-kicker">Questions</span>
           <h2 id="faq-heading" className="display">
-            Brainspore, QSell and who is behind them.
+            Brainspore and who is behind it.
           </h2>
         </div>
         <div className="faq-list">
@@ -331,10 +254,10 @@ function Contact() {
       <div className="wrap contact-panel">
         <div>
           <span className="section-kicker">Talk to us</span>
-          <h2 className="display">Tell us how your business runs today.</h2>
+          <h2 className="display">Tell us what you need built.</h2>
           <p>
-            Where does it slow down? Where do things get written twice? Tell us, and we will tell
-            you honestly whether software can help, and what it would take.
+            An ERP, an automation, a Business Central setup or a payment integration: tell us what
+            your business needs and we will come back to you.
           </p>
         </div>
         <div className="contact-action">
@@ -363,7 +286,7 @@ function Footer() {
         <Brand />
         <div className="footer-note">
           © {new Date().getFullYear()} Brainspore Group LLC · Software &amp; IT solutions · Nairobi,
-          Kenya
+          Kenya. Microsoft and Dynamics 365 are trademarks of the Microsoft group of companies.
         </div>
         <a className="back-top" href="#top">
           Back to top <ChevronUp size={13} />
@@ -381,7 +304,6 @@ function Home() {
         <Hero />
         <WhatWeDo />
         <QSell />
-        <Clients />
         <About />
         <Faq />
         <Contact />
