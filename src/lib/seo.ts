@@ -48,13 +48,43 @@ export const SCREENSHOT = {
 
 export const TITLE = 'Brainspore Group (BSG) | Kenya-Based Software & IT Solutions for Africa';
 export const DESCRIPTION =
-  'Brainspore Group LLC (BSG) is a Kenya-based company providing software and IT solutions for Africa: custom ERP, automations, Dynamics 365 Business Central, and payment and fintech. Maker of QSell.';
+  'Brainspore Group (BSG) is a Kenya-based company providing software and IT solutions for Africa: custom ERP, automations, Business Central and fintech.';
 
-export const SERVICES = [
-  'Custom ERP solutions',
-  'Automations',
-  'Microsoft Dynamics 365 Business Central',
-  'Payment and fintech solutions and integrations',
+export const SERVICE_DETAILS = [
+  {
+    name: 'Custom ERP solutions',
+    type: 'ERP development',
+    description:
+      'One system for sales, stock, purchasing, finance and people, built around how a business actually runs.',
+  },
+  {
+    name: 'Automations',
+    type: 'Business process automation',
+    description:
+      'Workflows that replace repeated manual work such as re-keying orders, chasing approvals and reconciling spreadsheets.',
+  },
+  {
+    name: 'Microsoft Dynamics 365 Business Central',
+    type: 'Microsoft Dynamics 365 Business Central implementation',
+    description:
+      'Setup, customisation and integration of Business Central for finance, inventory and operations.',
+  },
+  {
+    name: 'Payment and fintech solutions and integrations',
+    type: 'Payment integration',
+    description:
+      'Payment collection, wallets and integrations with M-Pesa and other payment providers.',
+  },
+];
+
+export const SERVICES = SERVICE_DETAILS.map((service) => service.name);
+
+export const SECTIONS = [
+  { name: 'What we do', fragment: 'what-we-do' },
+  { name: 'QSell', fragment: 'qsell' },
+  { name: 'About', fragment: 'about' },
+  { name: 'FAQs', fragment: 'faq' },
+  { name: 'Contact', fragment: 'contact' },
 ];
 
 export const KEYWORDS = [
@@ -111,9 +141,23 @@ export function buildJsonLd(faq: { question: string; answer: string }[]) {
       'Payment systems and fintech',
       'M-Pesa integration',
     ],
-    makesOffer: SERVICES.map((name) => ({
+    location: {
+      '@type': 'Place',
+      name: `${ORG.name}, ${ORG.city}`,
+      address: { '@type': 'PostalAddress', addressLocality: ORG.city, addressCountry: ORG.country },
+      geo: { '@type': 'GeoCoordinates', latitude: -1.2921, longitude: 36.8219 },
+    },
+    knowsLanguage: 'en',
+    makesOffer: SERVICE_DETAILS.map((service) => ({
       '@type': 'Offer',
-      itemOffered: { '@type': 'Service', name, provider: { '@id': id('organization') } },
+      itemOffered: {
+        '@type': 'Service',
+        name: service.name,
+        serviceType: service.type,
+        description: service.description,
+        provider: { '@id': id('organization') },
+        areaServed: { '@type': 'Place', name: 'Africa' },
+      },
     })),
     founder: { '@id': id('founder') },
     brand: { '@type': 'Brand', name: 'QSell' },
@@ -121,7 +165,7 @@ export function buildJsonLd(faq: { question: string; answer: string }[]) {
       '@type': 'ContactPoint',
       contactType: 'sales',
       email: ORG.email,
-      areaServed: ['KE', 'UG', 'TZ', 'RW'],
+      areaServed: 'Africa',
       availableLanguage: ['en'],
     },
     sameAs: ORG.socials,
@@ -182,7 +226,7 @@ export function buildJsonLd(faq: { question: string; answer: string }[]) {
       height: SCREENSHOT.height,
       caption: SCREENSHOT.alt,
     },
-    url: `${SITE_URL}/#solutions`,
+    url: `${SITE_URL}/#qsell`,
     author: { '@id': id('founder') },
     publisher: { '@id': id('organization') },
     areaServed: { '@type': 'Country', name: 'Kenya' },
@@ -199,8 +243,15 @@ export function buildJsonLd(faq: { question: string; answer: string }[]) {
     })),
   };
 
+  const navigation = SECTIONS.map((section) => ({
+    '@type': 'SiteNavigationElement',
+    '@id': id(`nav-${section.fragment}`),
+    name: section.name,
+    url: `${SITE_URL}/#${section.fragment}`,
+  }));
+
   return {
     '@context': 'https://schema.org',
-    '@graph': [organization, founder, website, webpage, qsell, faqPage],
+    '@graph': [organization, founder, website, webpage, ...navigation, qsell, faqPage],
   };
 }

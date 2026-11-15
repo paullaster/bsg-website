@@ -27,7 +27,10 @@ export const metadata: Metadata = {
   creator: 'Paullaster Okoth',
   publisher: ORG.name,
   category: 'technology',
-  alternates: { canonical: '/' },
+  alternates: { canonical: '/', languages: { 'en-KE': '/', 'x-default': '/' } },
+  formatDetection: { email: false, telephone: false, address: false },
+  referrer: 'origin-when-cross-origin',
+  appleWebApp: { title: 'Brainspore', capable: true, statusBarStyle: 'default' },
   robots: {
     index: true,
     follow: true,
@@ -58,13 +61,18 @@ export const metadata: Metadata = {
     'geo.position': '-1.2921;36.8219',
     ICBM: '-1.2921, 36.8219',
   },
-  verification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
-    ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }
-    : undefined,
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || undefined,
+    yandex: process.env.NEXT_PUBLIC_YANDEX_SITE_VERIFICATION || undefined,
+    other: process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION
+      ? { 'msvalidate.01': process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION }
+      : undefined,
+  },
 };
 
 export const viewport: Viewport = {
   themeColor: '#5f1116',
+  colorScheme: 'light',
   width: 'device-width',
   initialScale: 1,
 };
