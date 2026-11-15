@@ -4,13 +4,13 @@ import { useState } from 'react';
 import Image from 'next/image';
 
 import { faq } from '@/data/faq';
+import Services from '@/components/services';
 import { SCREENSHOT } from '@/lib/seo';
 import {
   ArrowRight,
   ArrowUpRight,
   Blocks,
   ChevronUp,
-  LayoutDashboard,
   Mail,
   Menu,
   Wallet,
@@ -24,29 +24,6 @@ const socials = [
   { label: 'LinkedIn', href: 'https://www.linkedin.com/company/101033521' },
   { label: 'Instagram', href: 'https://www.instagram.com/brainsporegroup/' },
   { label: 'Facebook', href: 'https://www.facebook.com/brainsporegroup' },
-];
-
-const services = [
-  {
-    icon: <Blocks size={20} strokeWidth={1.6} />,
-    title: 'Custom ERP solutions',
-    text: 'One system for sales, stock, purchasing, finance and people, built around how your business actually runs instead of forcing you into someone else’s process.',
-  },
-  {
-    icon: <Workflow size={20} strokeWidth={1.6} />,
-    title: 'Automations',
-    text: 'We replace repeated manual work, such as re-keying orders, chasing approvals and reconciling spreadsheets, with workflows that run on their own.',
-  },
-  {
-    icon: <LayoutDashboard size={20} strokeWidth={1.6} />,
-    title: 'Microsoft Dynamics 365 Business Central',
-    text: 'Setup, customisation and integration of Business Central, so it fits your finance, inventory and operations and connects to the other systems you use.',
-  },
-  {
-    icon: <Wallet size={20} strokeWidth={1.6} />,
-    title: 'Payment and fintech solutions',
-    text: 'Payment collection, wallets and integrations with M-Pesa and other payment providers, built so that money and records always agree.',
-  },
 ];
 
 function Brand() {
@@ -175,34 +152,6 @@ function Hero() {
         </div>
       </div>
     </>
-  );
-}
-
-function WhatWeDo() {
-  return (
-    <section id="what-we-do" className="section">
-      <div className="wrap">
-        <div className="section-head">
-          <div>
-            <span className="section-kicker">What Brainspore does</span>
-            <h2 className="section-title display">Four things we build, and build well.</h2>
-          </div>
-          <p className="section-intro">
-            Brainspore Group LLC is a software and IT solutions company. These are the systems we
-            design, build and integrate for businesses in Kenya and East Africa.
-          </p>
-        </div>
-        <div className="capability-grid">
-          {services.map((item) => (
-            <article className="capability" key={item.title}>
-              <div className="capability-icon">{item.icon}</div>
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
   );
 }
 
@@ -354,7 +303,7 @@ function Home() {
       <Header />
       <main>
         <Hero />
-        <WhatWeDo />
+        <Services />
         <QSell />
         <About />
         <Faq />
