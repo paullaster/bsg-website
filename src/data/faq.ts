@@ -7,7 +7,7 @@ export const faq = [
   {
     question: 'Who founded Brainspore?',
     answer:
-      'Brainspore was founded by Paullaster Okoth (also written Paullaster Amolo Okoth), a full-stack software engineer with 8 years of experience. Paullaster delivered the Engineers Board of Kenya membership portal, the Institution of Engineers of Kenya events and CPD portal, the National Research Fund grant management portal and the Médecins Sans Frontières (MSF) staff portal.',
+      'Paullaster Okoth founded Brainspore and leads its engineering. Paullaster has spent 8 years building production software, including systems for the Engineers Board of Kenya and the National Research Fund.',
   },
   {
     question: 'What does Brainspore build?',
