@@ -164,8 +164,8 @@ function Contact() {
           <span className="section-kicker">Talk to us</span>
           <h2 className="display">Tell us what you need built.</h2>
           <p>
-            An ERP, an automation, a Business Central setup or a payment integration: tell us what
-            your business needs and we will come back to you.
+            Custom software, an ERP, an automation, a Business Central setup or a payment
+            integration: tell us what your business needs and we will come back to you.
           </p>
         </div>
         <div className="contact-action">

@@ -27,6 +27,6 @@ export const faq = [
   {
     question: 'How do I start a project with Brainspore?',
     answer:
-      'Email hello@brainsporellc.com and tell us what your business needs: an ERP, an automation, a Business Central setup or a payment integration. We will come back to you.',
+      'Email hello@brainsporellc.com and tell us what your business needs: custom software, an ERP, an automation, a Business Central setup or a payment integration. We will come back to you.',
   },
 ];
