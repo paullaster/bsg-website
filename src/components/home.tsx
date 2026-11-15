@@ -5,8 +5,8 @@ import Image from 'next/image';
 
 import { faq } from '@/data/faq';
 import About from '@/components/about';
+import QSell from '@/components/qsell';
 import Services from '@/components/services';
-import { SCREENSHOT } from '@/lib/seo';
 import {
   ArrowRight,
   ArrowUpRight,
@@ -153,47 +153,6 @@ function Hero() {
         </div>
       </div>
     </>
-  );
-}
-
-function QSell() {
-  return (
-    <section id="qsell" className="section platform-section">
-      <div className="wrap">
-        <div className="platform-feature">
-          <div className="platform-statement">
-            <div>
-              <div className="platform-label">Our own solution</div>
-              <h3>QSell business management software.</h3>
-              <p>
-                Built by Brainspore. It runs sales, stock, finance, delivery and people in one
-                system, and gives each business its own online storefront for customers.
-              </p>
-            </div>
-            <a className="text-link" href="#contact">
-              Ask us about QSell <ArrowUpRight size={14} />
-            </a>
-          </div>
-          <div className="platform-map">
-            <div className="map-lines" aria-hidden="true" />
-            <div className="map-ring" aria-hidden="true" />
-            <figure className="console">
-              <div className="console-bar" aria-hidden="true">
-                <b>QSell admin console</b>
-              </div>
-              <Image
-                className="console-shot"
-                src={SCREENSHOT.src}
-                alt={SCREENSHOT.alt}
-                width={SCREENSHOT.width}
-                height={SCREENSHOT.height}
-                unoptimized
-              />
-            </figure>
-          </div>
-        </div>
-      </div>
-    </section>
   );
 }
 
