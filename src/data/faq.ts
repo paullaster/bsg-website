@@ -7,7 +7,7 @@ export const faq = [
   {
     question: 'Who founded Brainspore?',
     answer:
-      'Brainspore was founded by Paullaster Okoth (also written Paullaster Amolo Okoth), a full-stack software engineer with 8 years of experience in Node.js, React, MongoDB, Python and machine learning.',
+      'Brainspore was founded by Paullaster Okoth (also written Paullaster Amolo Okoth), a full-stack software engineer with 8 years of experience. Paullaster delivered the Engineers Board of Kenya membership portal, the Institution of Engineers of Kenya events and CPD portal, the National Research Fund grant management portal and the MSF staff portal.',
   },
   {
     question: 'What does Brainspore build?',

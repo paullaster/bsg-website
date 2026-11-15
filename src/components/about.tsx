@@ -40,6 +40,29 @@ const standards = [
   },
 ];
 
+const projects = [
+  {
+    org: 'Engineers Board of Kenya',
+    system: 'Membership portal',
+    text: 'Membership for the regulator of Kenya’s engineers.',
+  },
+  {
+    org: 'Institution of Engineers of Kenya',
+    system: 'Events and CPD portal',
+    text: 'Event bookings and professional development for the engineers’ professional body.',
+  },
+  {
+    org: 'National Research Fund',
+    system: 'Grant management portal',
+    text: 'Grant calls, applications and reviewers for a national research fund.',
+  },
+  {
+    org: 'MSF',
+    system: 'Staff portal',
+    text: 'The internal portal an organisation’s staff work in every day.',
+  },
+];
+
 export default function About() {
   const ref = useRef<HTMLElement>(null);
 
@@ -115,35 +138,56 @@ export default function About() {
           </div>
         </div>
 
-        <div className="abt-bottom">
-          <div className="abt-founder abt-reveal">
-            <div className="abt-monogram" aria-hidden="true">
-              <span>PO</span>
+        <div className="abt-record abt-reveal">
+          <div className="abt-record-head">
+            <div className="abt-founder">
+              <div className="abt-monogram" aria-hidden="true">
+                <span>PO</span>
+              </div>
+              <div>
+                <span className="abt-role">Founder and lead engineer</span>
+                <strong>Paullaster Okoth</strong>
+              </div>
             </div>
-            <div>
-              <span className="abt-role">Founder and lead engineer</span>
-              <strong>Paullaster Okoth</strong>
-              <p>8 years building production software, including everything above.</p>
-            </div>
+            <p className="abt-record-claim">
+              8 years building production software. Institutions run on systems Paullaster
+              delivered:
+            </p>
           </div>
-          <ul className="abt-standards">
-            {standards.map((item, i) => (
-              <li
-                key={item.title}
-                className="abt-reveal"
-                style={{ '--d': `${i * 110}ms` } as CSSProperties}
-              >
-                <span className="abt-check">
-                  <Check size={14} strokeWidth={2.4} />
-                </span>
-                <div>
-                  <b>{item.title}</b>
-                  <p>{item.text}</p>
-                </div>
+          <ul className="abt-projects">
+            {projects.map((item, i) => (
+              <li className="abt-project" key={item.org}>
+                <span className="abt-project-num">{String(i + 1).padStart(2, '0')}</span>
+                <strong>{item.org}</strong>
+                <span className="abt-project-system">{item.system}</span>
+                <p>{item.text}</p>
               </li>
             ))}
           </ul>
+          <p className="abt-record-foot">
+            Regulators, professional bodies, national funds and global organisations: places where
+            records, money and access have to be right. That is the standard Paullaster brought to
+            Brainspore.
+          </p>
         </div>
+
+        <ul className="abt-standards">
+          {standards.map((item, i) => (
+            <li
+              key={item.title}
+              className="abt-reveal"
+              style={{ '--d': `${i * 110}ms` } as CSSProperties}
+            >
+              <span className="abt-check">
+                <Check size={14} strokeWidth={2.4} />
+              </span>
+              <div>
+                <b>{item.title}</b>
+                <p>{item.text}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );
