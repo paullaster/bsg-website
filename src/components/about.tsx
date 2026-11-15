@@ -176,9 +176,9 @@ export default function About() {
             </span>
           </h2>
           <p className="abt-sub">
-            Brainspore Group LLC is a software and IT solutions company in Nairobi, founded and led
-            by Paullaster Okoth. Payments, wallets and ledgers are where mistakes cost the most, so
-            that is the work we have built our name on.
+            When software handles money, a small mistake becomes a real loss: a payment that goes
+            missing, a balance that does not match, a record nobody can explain. That is what we
+            build to prevent.
           </p>
         </div>
 
