@@ -121,8 +121,7 @@ function Hero() {
             <p className="hero-lede">
               Brainspore Group LLC (BSG) is a Kenya-based company providing software and IT
               solutions for Africa: custom ERP systems, automations, Microsoft Dynamics 365 Business
-              Central solutions, and payment and fintech integrations. We also make our own product,
-              QSell.
+              Central solutions, and payment and fintech integrations.
             </p>
             <div className="hero-actions">
               <a className="button-primary" href="#what-we-do">
