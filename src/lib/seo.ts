@@ -46,9 +46,9 @@ export const SCREENSHOT = {
   alt: 'QSell business management software by Brainspore Group LLC: a dashboard summary of sales, orders, payment collections, items needing attention and sales per day',
 };
 
-export const TITLE = 'Brainspore Group (BSG) | Software & IT Solutions, ERP & Fintech in Kenya';
+export const TITLE = 'Brainspore Group (BSG) | Kenya-Based Software & IT Solutions for Africa';
 export const DESCRIPTION =
-  'Brainspore Group LLC (BSG) is a Nairobi software and IT solutions company. Custom ERP, automations, Microsoft Dynamics 365 Business Central, and payment and fintech integrations for Kenya and East Africa. Maker of QSell. Founded by Paullaster Okoth.';
+  'Brainspore Group LLC (BSG) is a Kenya-based company providing software and IT solutions for Africa: custom ERP, automations, Dynamics 365 Business Central, and payment and fintech. Maker of QSell.';
 
 export const SERVICES = [
   'Custom ERP solutions',
@@ -94,7 +94,7 @@ export function buildJsonLd(faq: { question: string; answer: string }[]) {
     logo: { '@type': 'ImageObject', url: ORG.logo, width: 256, height: 256 },
     image: `${SITE_URL}/opengraph-image`,
     description:
-      'Brainspore Group LLC (BSG) is a software and IT solutions company in Nairobi, Kenya. It builds custom ERP solutions, automations, Microsoft Dynamics 365 Business Central solutions, and payment and fintech solutions and integrations for businesses in Kenya and East Africa. It also makes QSell business management software.',
+      'Brainspore Group LLC (BSG) is a Kenya-based company providing software and IT solutions for Africa. It builds custom ERP solutions, automations, Microsoft Dynamics 365 Business Central solutions, and payment and fintech solutions and integrations for businesses across Africa. It also makes QSell business management software.',
     email: ORG.email,
     address: { '@type': 'PostalAddress', addressLocality: ORG.city, addressCountry: ORG.country },
     areaServed: [
@@ -134,7 +134,7 @@ export function buildJsonLd(faq: { question: string; answer: string }[]) {
     alternateName: FOUNDER.alternateNames,
     jobTitle: FOUNDER.jobTitle,
     description:
-      'Founder of Brainspore Group LLC and a software engineer with 8 years of experience. Delivered the Engineers Board of Kenya membership portal, the Institution of Engineers of Kenya events and CPD portal, the National Research Fund grant management portal and the MSF staff portal.',
+      'Founder of Brainspore Group LLC and a software engineer with 8 years of experience. Delivered the Engineers Board of Kenya membership portal, the Institution of Engineers of Kenya events and CPD portal, the National Research Fund grant management portal and the Médecins Sans Frontières (MSF) staff portal.',
     url: `${SITE_URL}/#about`,
     worksFor: { '@id': id('organization') },
     knowsAbout: FOUNDER.knowsAbout,

@@ -2543,75 +2543,8 @@
   }
 }
 
-/* ---------- Founder strip on gold, matching Talk to us ---------- */
-.abt-glance {
-  background: var(--gold);
-  color: var(--burgundy);
-  box-shadow: 0 30px 70px rgba(95, 17, 22, 0.24);
-}
-.abt-glance-bg {
-  background-image:
-    linear-gradient(rgba(95, 17, 22, 0.07) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(95, 17, 22, 0.07) 1px, transparent 1px),
-    radial-gradient(420px 220px at 100% 0%, rgba(255, 243, 217, 0.6), transparent 70%);
-  background-size:
-    48px 48px,
-    48px 48px,
-    auto;
-}
-.abt-glance .abt-monogram {
-  background: var(--burgundy);
-  box-shadow:
-    0 0 0 6px rgba(95, 17, 22, 0.14),
-    0 14px 34px rgba(95, 17, 22, 0.3);
-}
-.abt-glance .abt-monogram::before {
-  border-color: rgba(95, 17, 22, 0.5);
-}
-.abt-glance .abt-monogram::after {
-  border-color: rgba(95, 17, 22, 0.25);
-}
-.abt-glance .abt-monogram span {
-  color: var(--pale-gold);
-}
-.abt-glance .abt-role {
-  color: var(--burgundy);
-}
-.abt-founder strong {
-  color: var(--burgundy);
-}
-.abt-founder small {
-  color: rgba(95, 17, 22, 0.78);
-}
-.abt-glance-reel {
-  border-left-color: rgba(95, 17, 22, 0.32);
-}
-.abt-glance-label {
-  color: rgba(95, 17, 22, 0.8);
-}
-.abt-slide strong {
-  color: var(--burgundy);
-}
-.abt-slide span {
-  color: rgba(95, 17, 22, 0.82);
-}
-.abt-step i {
-  background: rgba(95, 17, 22, 0.22);
-}
-.abt-step i::after {
-  background: var(--burgundy);
-}
-.abt-glance-note {
-  color: rgba(95, 17, 22, 0.85);
-  border-top-color: rgba(95, 17, 22, 0.28);
-}
 .abt-glance[data-paused='true'] .abt-step.on i::after {
   animation-play-state: paused;
-}
-@media (max-width: 1000px) {
-  .abt-glance-reel {
-    border-top-color: rgba(95, 17, 22, 0.32);
-  }
 }
 
 @keyframes rise-in {

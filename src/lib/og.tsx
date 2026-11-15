@@ -33,7 +33,7 @@ export function renderOgImage() {
         <div style={{ fontSize: 96, fontWeight: 700, lineHeight: 1.02 }}>Brainspore Group LLC</div>
         <div style={{ fontSize: 40, color: 'rgba(239,240,238,0.82)', lineHeight: 1.3 }}>
           Custom ERP, automations, Dynamics 365 Business Central, and payment and fintech solutions
-          for Kenya and East Africa.
+          for Africa, built in Kenya.
         </div>
       </div>
       <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 28 }}>

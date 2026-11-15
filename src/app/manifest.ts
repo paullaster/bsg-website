@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: 'Brainspore Group LLC',
     short_name: 'Brainspore',
-    description: 'Software and IT solutions company in Nairobi, Kenya. Maker of QSell.',
+    description: 'Kenya-based software and IT solutions company for Africa. Maker of QSell.',
     start_url: '/',
     display: 'standalone',
     background_color: '#eff0ee',

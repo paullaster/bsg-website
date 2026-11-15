@@ -274,7 +274,7 @@ export default function Services() {
           </div>
           <p>
             Brainspore Group LLC is a software and IT solutions company. These are the systems we
-            design, build and integrate for businesses in Kenya and East Africa.
+            design, build and integrate for businesses across Africa.
           </p>
         </header>
         <div className="svc-grid">

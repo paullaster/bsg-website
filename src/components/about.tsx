@@ -57,7 +57,7 @@ const projects = [
     text: 'Grant calls, applications and reviewers for a national research fund.',
   },
   {
-    org: 'MSF',
+    org: 'Médecins Sans Frontières',
     system: 'Staff portal',
     text: 'The internal portal an organisation’s staff work in every day.',
   },

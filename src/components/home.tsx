@@ -116,12 +116,13 @@ function Hero() {
           <div className="hero-copy">
             <span className="eyebrow">Software &amp; IT company · Nairobi, Kenya</span>
             <h1 className="display">
-              Software and IT solutions for businesses in <em>Kenya and East Africa.</em>
+              Software and IT solutions for <em>Africa, built in Kenya.</em>
             </h1>
             <p className="hero-lede">
-              Brainspore Group LLC (BSG) builds custom ERP systems, automations, Microsoft Dynamics
-              365 Business Central solutions, and payment and fintech integrations for businesses in
-              Kenya and East Africa. We also make our own product, QSell.
+              Brainspore Group LLC (BSG) is a Kenya-based company providing software and IT
+              solutions for Africa: custom ERP systems, automations, Microsoft Dynamics 365 Business
+              Central solutions, and payment and fintech integrations. We also make our own product,
+              QSell.
             </p>
             <div className="hero-actions">
               <a className="button-primary" href="#what-we-do">
@@ -144,7 +145,7 @@ function Hero() {
           </div>
           <div className="proof-item">
             <span className="proof-value">Nairobi</span>
-            <span className="proof-label">based in Kenya, serving East Africa</span>
+            <span className="proof-label">based in Kenya, serving Africa</span>
           </div>
           <div className="proof-item">
             <span className="proof-value">QSell</span>
