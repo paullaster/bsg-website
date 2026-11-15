@@ -8,6 +8,12 @@ export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://brainspore
   '',
 );
 
+/**
+ * The date the page content last meaningfully changed. Search engines distrust a "last modified"
+ * that changes on every build, so update this only when the page's real content changes.
+ */
+export const LAST_UPDATED = '2026-11-15';
+
 export const ORG = {
   name: 'Brainspore Group LLC',
   alternateNames: ['Brainspore', 'Brainspore Group', 'BSG', 'BSG LLC', 'Brainspore LLC'],
