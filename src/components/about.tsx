@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import type { CSSProperties } from 'react';
+import Image from 'next/image';
 import { ArrowUpRight, Check, Landmark, Smartphone, Wallet } from 'lucide-react';
 
 const chain = [
@@ -86,8 +87,16 @@ function FounderGlance() {
     >
       <div className="abt-glance-bg" aria-hidden="true" />
       <div className="abt-founder">
-        <div className="abt-monogram" aria-hidden="true">
-          <span>PO</span>
+        <div className="abt-monogram">
+          <div className="abt-monogram-img">
+            <Image
+              src="/images/paullaster-okoth.avif"
+              alt="Paullaster Okoth, founder and lead engineer at Brainspore"
+              width={640}
+              height={640}
+              unoptimized
+            />
+          </div>
         </div>
         <div>
           <span className="abt-role">Founder and lead engineer</span>

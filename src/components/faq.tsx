@@ -71,9 +71,9 @@ export default function Faq() {
       </div>
       <div className="wrap">
         <header className="fq-head fq-reveal">
-          <span className="fq-kicker">Questions</span>
+          <span className="fq-kicker">FAQs</span>
           <h2 id="fq-heading" className="display">
-            Straight answers about Brainspore.
+            Answered before you ask.
           </h2>
         </header>
 

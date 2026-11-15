@@ -133,6 +133,7 @@ export function buildJsonLd(faq: { question: string; answer: string }[]) {
     name: FOUNDER.name,
     alternateName: FOUNDER.alternateNames,
     jobTitle: FOUNDER.jobTitle,
+    image: `${SITE_URL}/images/paullaster-okoth.avif`,
     description:
       'Founder of Brainspore Group LLC and a software engineer with 8 years of experience. Delivered the Engineers Board of Kenya membership portal, the Institution of Engineers of Kenya events and CPD portal, the National Research Fund grant management portal and the Médecins Sans Frontières (MSF) staff portal.',
     url: `${SITE_URL}/#about`,
