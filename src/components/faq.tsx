@@ -10,8 +10,8 @@ const EMAIL = 'hello@brainsporellc.com';
 
 const actions: Record<number, { label: string; href: string; mail?: boolean }> = {
   1: { label: 'About the founder', href: '#about' },
-  2: { label: 'See what we build', href: '#what-we-do' },
-  3: { label: 'Meet QSell', href: '#qsell' },
+  2: { label: 'Meet QSell', href: '#qsell' },
+  3: { label: 'See how it is built', href: '#about' },
   4: { label: 'Tell us about your business', href: `mailto:${EMAIL}`, mail: true },
   5: { label: EMAIL, href: `mailto:${EMAIL}`, mail: true },
 };

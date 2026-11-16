@@ -77,15 +77,16 @@ export default function QSell() {
         <div className="platform-feature">
           <div className="platform-statement">
             <div>
-              <div className="platform-label">Our own solution</div>
+              <div className="platform-label">Our flagship solution</div>
               <h3>QSell business management software.</h3>
               <p>
-                Built by Brainspore. It runs sales, stock, finance, delivery and people in one
-                system, and gives each business its own online storefront for customers.
+                It runs sales, stock, finance, delivery and people in one system, and gives each
+                business its own online storefront for customers. Secure by design, reliable at
+                every level.
               </p>
             </div>
             <a className="text-link" href="#contact">
-              Ask us about QSell <ArrowUpRight size={14} />
+              Get started with QSell <ArrowUpRight size={14} />
             </a>
           </div>
 

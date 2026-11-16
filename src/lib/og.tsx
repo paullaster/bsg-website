@@ -32,8 +32,8 @@ export function renderOgImage() {
       <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
         <div style={{ fontSize: 96, fontWeight: 700, lineHeight: 1.02 }}>Brainspore Group LLC</div>
         <div style={{ fontSize: 40, color: 'rgba(239,240,238,0.82)', lineHeight: 1.3 }}>
-          Custom ERP, automations, Dynamics 365 Business Central, and payment and fintech solutions
-          for Africa, built in Kenya.
+          Solid, secure, reliable software and IT solutions for Africa, built in Kenya. Maker of
+          QSell.
         </div>
       </div>
       <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 28 }}>

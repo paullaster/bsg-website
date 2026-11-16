@@ -54,39 +54,10 @@ export const SCREENSHOT = {
 
 export const TITLE = 'Brainspore Group (BSG) | Kenya-Based Software & IT Solutions for Africa';
 export const DESCRIPTION =
-  'Brainspore Group (BSG) is a Kenya-based company providing software and IT solutions for Africa: custom ERP, automations, Business Central and fintech.';
-
-export const SERVICE_DETAILS = [
-  {
-    name: 'Custom ERP solutions',
-    type: 'ERP development',
-    description:
-      'One system for sales, stock, purchasing, finance and people, built around how a business actually runs.',
-  },
-  {
-    name: 'Automations',
-    type: 'Business process automation',
-    description:
-      'Workflows that replace repeated manual work such as re-keying orders, chasing approvals and reconciling spreadsheets.',
-  },
-  {
-    name: 'Microsoft Dynamics 365 Business Central',
-    type: 'Microsoft Dynamics 365 Business Central implementation',
-    description:
-      'Setup, customisation and integration of Business Central for finance, inventory and operations.',
-  },
-  {
-    name: 'Payment and fintech solutions and integrations',
-    type: 'Payment integration',
-    description:
-      'Payment collection, wallets and integrations with M-Pesa and other payment providers.',
-  },
-];
-
-export const SERVICES = SERVICE_DETAILS.map((service) => service.name);
+  'Brainspore Group (BSG) is a Kenya-based company providing software and IT solutions for Africa. Maker of QSell: secure, reliable business management software.';
 
 export const SECTIONS = [
-  { name: 'What we do', fragment: 'what-we-do' },
+  { name: 'Solutions', fragment: 'what-we-do' },
   { name: 'QSell', fragment: 'qsell' },
   { name: 'About', fragment: 'about' },
   { name: 'FAQs', fragment: 'faq' },
@@ -107,7 +78,7 @@ export const KEYWORDS = [
   'IT solutions East Africa',
   'software companies in Africa',
   'IT solutions Africa',
-  'custom ERP solutions Kenya',
+  'ERP software Kenya',
   'ERP software company Kenya',
   'business automation Kenya',
   'Microsoft Dynamics 365 Business Central Kenya',
@@ -130,7 +101,7 @@ export function buildJsonLd(faq: { question: string; answer: string }[]) {
     logo: { '@type': 'ImageObject', url: ORG.logo, width: 256, height: 256 },
     image: `${SITE_URL}/opengraph-image`,
     description:
-      'Brainspore Group LLC (BSG) is a Kenya-based company providing software and IT solutions for Africa. It builds custom ERP solutions, automations, Microsoft Dynamics 365 Business Central solutions, and payment and fintech solutions and integrations for businesses across Africa. It also makes QSell business management software.',
+      'Brainspore Group LLC (BSG) is a Kenya-based company providing software and IT solutions for Africa, built to be solid, secure and reliable. Its flagship solution is QSell business management software.',
     email: ORG.email,
     address: { '@type': 'PostalAddress', addressLocality: ORG.city, addressCountry: ORG.country },
     areaServed: [
@@ -154,17 +125,6 @@ export function buildJsonLd(faq: { question: string; answer: string }[]) {
       geo: { '@type': 'GeoCoordinates', latitude: -1.2921, longitude: 36.8219 },
     },
     knowsLanguage: 'en',
-    makesOffer: SERVICE_DETAILS.map((service) => ({
-      '@type': 'Offer',
-      itemOffered: {
-        '@type': 'Service',
-        name: service.name,
-        serviceType: service.type,
-        description: service.description,
-        provider: { '@id': id('organization') },
-        areaServed: { '@type': 'Place', name: 'Africa' },
-      },
-    })),
     founder: { '@id': id('founder') },
     brand: { '@type': 'Brand', name: 'QSell' },
     contactPoint: {

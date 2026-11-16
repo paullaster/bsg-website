@@ -1,21 +1,27 @@
 # Brainspore Group LLC (BSG)
 
-> Brainspore Group LLC (BSG) is a Kenya-based company providing software and IT solutions for Africa: custom ERP solutions, automations, Microsoft Dynamics 365 Business Central, and payment and fintech solutions and integrations. Also known as Brainspore, Brainspore Group, BSG and BSG LLC.
+> Brainspore Group LLC (BSG) is a Kenya-based company providing software and IT solutions for Africa, built to be solid, secure and reliable. Its flagship solution is QSell, business management software. Also known as Brainspore, Brainspore Group, BSG and BSG LLC.
 
 Website: https://www.brainsporellc.com
 Location: Nairobi, Kenya
 Email: hello@brainsporellc.com
 
-## What Brainspore does
-
-- Custom ERP solutions: one system for sales, stock, purchasing, finance and people, built around how a business actually runs.
-- Automations: workflows that replace repeated manual work such as re-keying orders, chasing approvals and reconciling spreadsheets.
-- Microsoft Dynamics 365 Business Central: setup, customisation and integration for finance, inventory and operations.
-- Payment and fintech solutions and integrations: payment collection, wallets and integrations with M-Pesa and other payment providers.
-
 ## QSell
 
 QSell is business management software built by Brainspore Group LLC. It runs sales, stock, finance, delivery and people in one system, and gives each business its own online storefront for customers.
+
+## How the solutions are built
+
+- Every action is on record: each change is kept permanently, with what changed, who changed it, when and why.
+- Secure by design: access is decided on the server for every action, so information reaches only the people it is meant for.
+- Reliable at every level: every feature is tested from the smallest function to the complete user journey.
+
+## Where the solutions work
+
+- Operations: sales, stock, purchasing, finance and people in one connected system.
+- Automation: repeated manual work such as re-keying orders, chasing approvals and reconciling spreadsheets runs on its own.
+- Finance: finance, inventory and operations on Microsoft Dynamics 365 Business Central, connected to other systems.
+- Payments: payment collection and wallets, with M-Pesa and other payment providers.
 
 ## Founder
 

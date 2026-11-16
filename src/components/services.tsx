@@ -199,32 +199,32 @@ const services: Service[] = [
   {
     index: '01',
     tag: 'ERP',
-    title: 'Custom ERP solutions',
-    text: 'One system for sales, stock, purchasing, finance and people, built around how your business actually runs instead of forcing you into someone else’s process.',
+    title: 'Operations in one system',
+    text: 'Sales, stock, purchasing, finance and people run in one connected system, so every team works from the same record.',
     span: 'span-7',
     visual: <ErpVisual />,
   },
   {
     index: '02',
     tag: 'Automation',
-    title: 'Automations',
-    text: 'We replace repeated manual work, such as re-keying orders, chasing approvals and reconciling spreadsheets, with workflows that run on their own.',
+    title: 'Work that runs itself',
+    text: 'Repeated manual work, such as re-keying orders, chasing approvals and reconciling spreadsheets, runs on its own.',
     span: 'span-5',
     visual: <AutomationVisual />,
   },
   {
     index: '03',
     tag: 'Microsoft',
-    title: 'Microsoft Dynamics 365 Business Central',
-    text: 'Setup, customisation and integration of Business Central, so it fits your finance, inventory and operations and connects to the other systems you use.',
+    title: 'Finance on Business Central',
+    text: 'Finance, inventory and operations on Microsoft Dynamics 365 Business Central, connected to the other systems a business uses.',
     span: 'span-5',
     visual: <BusinessCentralVisual />,
   },
   {
     index: '04',
     tag: 'Fintech',
-    title: 'Payment and fintech solutions',
-    text: 'Payment collection, wallets and integrations with M-Pesa and other payment providers, built so that money and records always agree.',
+    title: 'Payments that settle',
+    text: 'Payment collection and wallets, with M-Pesa and other payment providers, so that money and records always agree.',
     span: 'span-7',
     visual: <PaymentsVisual />,
   },
@@ -269,8 +269,8 @@ export default function Services() {
       <div className="wrap">
         <header className="svc-head reveal">
           <div>
-            <span className="svc-kicker">What Brainspore does</span>
-            <h2 className="display">Four things we build, and build well.</h2>
+            <span className="svc-kicker">Our solutions</span>
+            <h2 className="display">Solid where it counts.</h2>
           </div>
           <p>
             Every business depends on four things: records it can trust, work that moves without

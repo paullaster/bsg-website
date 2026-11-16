@@ -47,12 +47,12 @@ function Header() {
       <div className="wrap nav-inner">
         <Brand />
         <nav className="nav-links" aria-label="Main navigation">
-          <a href="#what-we-do">What we do</a>
+          <a href="#what-we-do">Solutions</a>
           <a href="#qsell">QSell</a>
           <a href="#about">About</a>
         </nav>
         <a className="nav-cta" href="#contact">
-          Talk to us <ArrowUpRight size={15} />
+          Contact us <ArrowUpRight size={15} />
         </a>
         <button
           type="button"
@@ -68,7 +68,7 @@ function Header() {
       {open && (
         <nav id="mobile-navigation" className="mobile-nav" aria-label="Mobile navigation">
           <a href="#what-we-do" onClick={close}>
-            What we do
+            Solutions
           </a>
           <a href="#qsell" onClick={close}>
             QSell
@@ -77,7 +77,7 @@ function Header() {
             About
           </a>
           <a className="mobile-cta" href="#contact" onClick={close}>
-            Talk to us
+            Contact us
           </a>
         </nav>
       )}
@@ -120,15 +120,14 @@ function Hero() {
             </h1>
             <p className="hero-lede">
               Brainspore Group LLC (BSG) is a Kenya-based company providing software and IT
-              solutions for Africa: custom ERP systems, automations, Microsoft Dynamics 365 Business
-              Central solutions, and payment and fintech integrations.
+              solutions for Africa, built to be solid, secure and reliable.
             </p>
             <div className="hero-actions">
-              <a className="button-primary" href="#what-we-do">
-                What we do <ArrowRight size={15} />
+              <a className="button-primary" href="#qsell">
+                Explore QSell <ArrowRight size={15} />
               </a>
               <a className="text-link" href="#contact">
-                Talk to us <ArrowUpRight size={14} />
+                Contact us <ArrowUpRight size={14} />
               </a>
             </div>
           </div>
@@ -148,7 +147,7 @@ function Hero() {
           </div>
           <div className="proof-item">
             <span className="proof-value">QSell</span>
-            <span className="proof-label">our own product, built in-house</span>
+            <span className="proof-label">our flagship solution</span>
           </div>
         </div>
       </div>
@@ -161,12 +160,9 @@ function Contact() {
     <section id="contact" className="contact-section">
       <div className="wrap contact-panel">
         <div>
-          <span className="section-kicker">Talk to us</span>
-          <h2 className="display">Tell us what you need built.</h2>
-          <p>
-            Custom software, an ERP, an automation, a Business Central setup or a payment
-            integration: tell us what your business needs and we will come back to you.
-          </p>
+          <span className="section-kicker">Get started</span>
+          <h2 className="display">Put QSell to work in your business.</h2>
+          <p>Tell us about your business and we will come back to you.</p>
         </div>
         <div className="contact-action">
           <a className="button-primary" href={`mailto:${EMAIL}`}>

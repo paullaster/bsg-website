@@ -2,7 +2,7 @@ export const faq = [
   {
     question: 'What is Brainspore Group LLC?',
     answer:
-      'Brainspore Group LLC (BSG) is a Kenya-based company providing software and IT solutions for Africa. We build custom ERP solutions, automations, Microsoft Dynamics 365 Business Central solutions, and payment and fintech solutions and integrations.',
+      'Brainspore Group LLC (BSG) is a Kenya-based company providing software and IT solutions for Africa. Our solutions are built to be solid, secure and reliable.',
   },
   {
     question: 'Who founded Brainspore?',
@@ -10,23 +10,23 @@ export const faq = [
       'Paullaster Okoth founded Brainspore and leads its engineering. Paullaster has spent 8 years building production software, including systems for the Engineers Board of Kenya and the National Research Fund.',
   },
   {
-    question: 'What does Brainspore build?',
-    answer:
-      'We build custom ERP solutions, automations that replace repeated manual work, Microsoft Dynamics 365 Business Central setup, customisation and integration, and payment and fintech solutions, including integrations with M-Pesa and other payment providers.',
-  },
-  {
     question: 'What is QSell?',
     answer:
-      'QSell is business management software built by Brainspore Group LLC. It runs sales, stock, finance, delivery and people in one system, and gives each business its own online storefront for customers.',
+      'QSell is Brainspore’s flagship solution: business management software that runs sales, stock, finance, delivery and people in one system, and gives each business its own online storefront for customers.',
   },
   {
-    question: 'Do you work with businesses outside Kenya?',
+    question: 'How secure and reliable is QSell?',
     answer:
-      'Yes. Brainspore is Kenya-based and provides software and IT solutions for businesses across Africa.',
+      'Access is decided on the server for every action, so information reaches only the people it is meant for. Every change is kept permanently, with what changed, who changed it, when and why. Every feature is tested from the smallest function to the complete user journey.',
   },
   {
-    question: 'How do I start a project with Brainspore?',
+    question: 'Is Brainspore only for businesses in Kenya?',
     answer:
-      'Email hello@brainsporellc.com and tell us what your business needs: custom software, an ERP, an automation, a Business Central setup or a payment integration. We will come back to you.',
+      'No. Brainspore is Kenya-based and provides software and IT solutions for businesses across Africa.',
+  },
+  {
+    question: 'How do I get started with QSell?',
+    answer:
+      'Email hello@brainsporellc.com and tell us about your business. We will come back to you.',
   },
 ];
