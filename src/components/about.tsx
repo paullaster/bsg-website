@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import type { CSSProperties } from 'react';
 import Image from 'next/image';
 import { ArrowUpRight, Check, Landmark, Smartphone, Wallet } from 'lucide-react';
@@ -41,7 +41,9 @@ const standards = [
   },
 ];
 
-const projects = [
+type Project = { org: string; system: string; text: string; logo?: string };
+
+const projects: Project[] = [
   {
     org: 'Engineers Board of Kenya',
     system: 'Membership portal',
@@ -65,26 +67,8 @@ const projects = [
 ];
 
 function FounderGlance() {
-  const [index, setIndex] = useState(0);
-  const [paused, setPaused] = useState(false);
-
-  useEffect(() => {
-    if (paused) return;
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    const id = window.setTimeout(() => setIndex((value) => (value + 1) % projects.length), 3800);
-    return () => window.clearTimeout(id);
-  }, [paused, index]);
-
   return (
-    <div
-      className="abt-glance abt-reveal"
-      data-paused={paused}
-      style={{ '--i': index } as CSSProperties}
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
-      onFocus={() => setPaused(true)}
-      onBlur={() => setPaused(false)}
-    >
+    <div className="abt-glance abt-reveal">
       <div className="abt-glance-bg" aria-hidden="true" />
       <div className="abt-founder">
         <div className="abt-monogram">
@@ -105,36 +89,25 @@ function FounderGlance() {
         </div>
       </div>
 
-      <div className="abt-glance-reel">
+      <div className="abt-trust">
         <span className="abt-glance-label">Delivered by Paullaster for</span>
-        <div className="abt-window" aria-hidden="true">
-          <div className="abt-track">
-            {projects.map((item) => (
-              <div className="abt-slide" key={item.org}>
-                <strong>{item.org}</strong>
-                <span>{item.system}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="abt-steps" role="group" aria-label="Systems Paullaster delivered">
-          {projects.map((item, i) => (
-            <button
-              key={item.org}
-              type="button"
-              className={`abt-step${i === index ? ' on' : ''}`}
-              aria-label={`${item.org}: ${item.system}`}
-              aria-pressed={i === index}
-              onClick={() => setIndex(i)}
-            >
-              <i />
-            </button>
-          ))}
-        </div>
-        <ul className="sr-only">
+        <ul className="abt-logos">
           {projects.map((item) => (
-            <li key={item.org}>
-              {item.org}: {item.system}
+            <li className="abt-logo" key={item.org} title={`${item.org}: ${item.system}`}>
+              {item.logo ? (
+                <Image
+                  src={item.logo}
+                  alt={`${item.org} logo`}
+                  width={240}
+                  height={96}
+                  unoptimized
+                />
+              ) : (
+                <span>{item.org}</span>
+              )}
+              <span className="sr-only">
+                {item.org}: {item.system}
+              </span>
             </li>
           ))}
         </ul>

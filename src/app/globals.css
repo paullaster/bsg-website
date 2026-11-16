@@ -2416,11 +2416,6 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
-.abt-glance-reel {
-  min-width: 0;
-  padding-left: 40px;
-  border-left: 1px solid rgba(250, 211, 157, 0.25);
-}
 .abt-glance-label {
   display: block;
   margin-bottom: 8px;
@@ -2428,72 +2423,6 @@
   font: 500 10px var(--app-font-mono);
   letter-spacing: 0.16em;
   text-transform: uppercase;
-}
-.abt-window {
-  height: 70px;
-  overflow: hidden;
-  -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 22%, #000 78%, transparent 100%);
-  mask-image: linear-gradient(180deg, transparent 0, #000 22%, #000 78%, transparent 100%);
-}
-.abt-track {
-  transform: translateY(calc(var(--i) * -70px));
-  transition: transform 0.8s cubic-bezier(0.7, 0, 0.2, 1);
-}
-.abt-slide {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 70px;
-}
-.abt-slide strong {
-  overflow: hidden;
-  color: #fff;
-  font: 700 clamp(19px, 2.2vw, 28px) / 1.15 var(--app-font-serif);
-  letter-spacing: -0.04em;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.abt-slide span {
-  margin-top: 5px;
-  color: var(--pale-gold);
-  font: 500 11px var(--app-font-mono);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-.abt-steps {
-  display: flex;
-  gap: 8px;
-  margin-top: 10px;
-}
-.abt-step {
-  flex: 1 1 0;
-  max-width: 64px;
-  padding: 8px 0;
-  border: 0;
-  background: transparent;
-  cursor: pointer;
-}
-.abt-step i {
-  display: block;
-  height: 2px;
-  background: rgba(250, 211, 157, 0.25);
-  overflow: hidden;
-  position: relative;
-}
-.abt-step i::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, var(--gold), #fff3d9);
-  transform: scaleX(0);
-  transform-origin: left;
-}
-.abt-step.on i::after {
-  animation: abt-fill 3.8s linear forwards;
-}
-.abt-step:focus-visible {
-  outline: 2px solid var(--gold);
-  outline-offset: 2px;
 }
 .abt-glance-note {
   grid-column: 1 / -1;
@@ -2504,24 +2433,11 @@
   font-size: 12.5px;
   line-height: 1.65;
 }
-
-@keyframes abt-fill {
-  to {
-    transform: scaleX(1);
-  }
-}
-
 @media (max-width: 1000px) {
   .abt-glance {
     grid-template-columns: 1fr;
     gap: 24px;
     padding: 28px 26px;
-  }
-  .abt-glance-reel {
-    padding-left: 0;
-    padding-top: 22px;
-    border-left: 0;
-    border-top: 1px solid rgba(250, 211, 157, 0.25);
   }
   .abt-glance-note {
     max-width: none;
@@ -2532,19 +2448,6 @@
     margin-top: 52px;
     padding: 26px 20px;
   }
-}
-@media (prefers-reduced-motion: reduce) {
-  .abt-track {
-    transition: none;
-  }
-  .abt-step.on i::after {
-    animation: none;
-    transform: scaleX(1);
-  }
-}
-
-.abt-glance[data-paused='true'] .abt-step.on i::after {
-  animation-play-state: paused;
 }
 
 /* Founder headshot inside the ring badge */
@@ -2568,6 +2471,62 @@
   .abt-glance .abt-monogram {
     width: 88px;
     height: 88px;
+  }
+}
+
+/* Founder strip: client logos */
+.abt-trust {
+  min-width: 0;
+  padding-left: 40px;
+  border-left: 1px solid rgba(250, 211, 157, 0.25);
+}
+.abt-logos {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.abt-logo {
+  display: grid;
+  place-items: center;
+  height: 82px;
+  padding: 12px 14px;
+  border-radius: 6px;
+  background: #ffffff;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.28);
+  color: var(--burgundy);
+  font: 700 12px/1.3 var(--app-font-serif);
+  letter-spacing: -0.02em;
+  text-align: center;
+  transition:
+    transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1),
+    box-shadow 0.35s;
+}
+.abt-logo:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.36);
+}
+.abt-logo img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 52px;
+  object-fit: contain;
+}
+@media (max-width: 1000px) {
+  .abt-trust {
+    padding-left: 0;
+    padding-top: 22px;
+    border-left: 0;
+    border-top: 1px solid rgba(250, 211, 157, 0.25);
+  }
+}
+@media (max-width: 700px) {
+  .abt-logos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
