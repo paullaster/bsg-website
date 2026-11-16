@@ -28,16 +28,16 @@ const chain = [
 
 const standards = [
   {
-    title: 'Traceable to the last detail.',
-    text: 'Every change leaves a permanent trail: what changed, who changed it, when and why.',
+    title: 'Every action on record.',
+    text: 'Each change is kept permanently: what changed, who changed it, when and why. Nothing is altered without a trace.',
   },
   {
-    title: 'Closed by default.',
-    text: 'Every action is permission-checked on the server, so information reaches only the people it is meant for.',
+    title: 'Secure by design.',
+    text: 'Access is decided on the server for every action, whatever the screen shows. Information reaches only the people it is meant for.',
   },
   {
-    title: 'Reliability, proven.',
-    text: 'Every feature is tested at every level, from single functions to the full user journey, before it reaches you.',
+    title: 'Reliable at every level.',
+    text: 'Tested from the smallest function to the complete user journey, so what works today keeps working.',
   },
 ];
 
@@ -185,8 +185,8 @@ export default function About() {
             </span>
           </h2>
           <p className="abt-sub">
-            Value is not a feature list. It is a payment collected, a balance protected, a record
-            that holds up. That is how we measure every system we build.
+            Real value is a payment collected, a balance safe, a record intact. Every solution we
+            make is held to that standard, and QSell is built on it.
           </p>
         </div>
 
