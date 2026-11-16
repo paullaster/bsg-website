@@ -26,20 +26,7 @@ const chain = [
   },
 ];
 
-const standards = [
-  {
-    title: 'Your information stays protected.',
-    text: 'Only the people you allow can see or change it, and every change is recorded.',
-  },
-  {
-    title: 'Easy for the people who use it.',
-    text: 'Clear screens and short steps, so time goes to the business, not to learning the software.',
-  },
-  {
-    title: 'Ready whenever you are.',
-    text: 'Every feature is tested before it reaches you, so what works today keeps working.',
-  },
-];
+const standards = ['Secure.', 'Reliable.', 'Made to serve its users.'];
 
 type Project = { org: string; system: string; text: string; logo?: string };
 
@@ -203,17 +190,14 @@ export default function About() {
         <ul className="abt-standards">
           {standards.map((item, i) => (
             <li
-              key={item.title}
+              key={item}
               className="abt-reveal"
               style={{ '--d': `${i * 110}ms` } as CSSProperties}
             >
               <span className="abt-check">
                 <Check size={14} strokeWidth={2.4} />
               </span>
-              <div>
-                <b>{item.title}</b>
-                <p>{item.text}</p>
-              </div>
+              <b>{item}</b>
             </li>
           ))}
         </ul>
