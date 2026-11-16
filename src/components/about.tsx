@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react';
 import type { CSSProperties } from 'react';
 import Image from 'next/image';
-import { ArrowUpRight, Check, Landmark, Smartphone, Wallet } from 'lucide-react';
+import { ArrowUpRight, Landmark, Smartphone, Wallet } from 'lucide-react';
 
 const chain = [
   {
@@ -23,21 +23,6 @@ const chain = [
     step: 'Money is recorded',
     title: 'A full ledger',
     text: 'Every shilling accounted for, so the books agree.',
-  },
-];
-
-const standards = [
-  {
-    title: 'A record that never needs defending.',
-    text: 'Every change is kept for good: what changed, who changed it, when and why. When someone asks where a figure came from, the answer is already there.',
-  },
-  {
-    title: 'Money and data stay with the right people.',
-    text: 'Every action is checked on the server, whatever the screen shows, so each person sees and does only what their role allows.',
-  },
-  {
-    title: 'Tomorrow works the way today did.',
-    text: 'Each feature is tested from the smallest function to the complete journey, so the business is never the one to find out something broke.',
   },
 ];
 
@@ -199,24 +184,6 @@ export default function About() {
         </div>
 
         <FounderGlance />
-
-        <ul className="abt-standards">
-          {standards.map((item, i) => (
-            <li
-              key={item.title}
-              className="abt-reveal"
-              style={{ '--d': `${i * 110}ms` } as CSSProperties}
-            >
-              <span className="abt-check">
-                <Check size={14} strokeWidth={2.4} />
-              </span>
-              <div>
-                <b>{item.title}</b>
-                <p>{item.text}</p>
-              </div>
-            </li>
-          ))}
-        </ul>
       </div>
     </section>
   );
