@@ -10,34 +10,34 @@ const chain = [
     icon: <Smartphone size={22} strokeWidth={1.5} />,
     step: 'Money comes in',
     title: 'Payment integrations',
-    text: 'Collecting payments through M-Pesa and other providers.',
+    text: 'Every sale collected, through M-Pesa and other providers.',
   },
   {
     icon: <Wallet size={22} strokeWidth={1.5} />,
     step: 'Money is held',
     title: 'Wallet services',
-    text: 'Balances that users can hold, move and spend.',
+    text: 'Balances people can hold, move and spend with confidence.',
   },
   {
     icon: <Landmark size={22} strokeWidth={1.5} />,
     step: 'Money is recorded',
     title: 'A full ledger',
-    text: 'The finance core inside QSell, so the books always agree.',
+    text: 'Every shilling accounted for, so the books agree.',
   },
 ];
 
 const standards = [
   {
-    title: 'Every step is on the record.',
-    text: 'Orders move through timestamped stages, so you can see who did what, and when.',
+    title: 'Nothing unaccounted for.',
+    text: 'Every order stage is timestamped with who acted, and when.',
   },
   {
-    title: 'People see only what their job needs.',
+    title: 'Only the right hands.',
     text: 'Access is checked on the server for every action.',
   },
   {
-    title: 'Tested before it ships.',
-    text: 'Every feature is released with automated tests.',
+    title: 'Built to last.',
+    text: 'Every feature ships with automated tests, so value survives change.',
   },
 ];
 
@@ -180,21 +180,20 @@ export default function About() {
             </span>
             <span className="abt-line">
               <span>
-                that handles <em>real money.</em>
+                that creates <em>real value.</em>
               </span>
             </span>
           </h2>
           <p className="abt-sub">
-            When software handles money, a small mistake becomes a real loss: a payment that goes
-            missing, a balance that does not match, a record nobody can explain. That is what we
-            build to prevent.
+            Value is not a feature list. It is a payment collected, a balance protected, a record
+            that holds up. That is how we measure every system we build.
           </p>
         </div>
 
         <div className="abt-panel abt-reveal" style={{ '--d': '120ms' } as CSSProperties}>
           <div className="abt-panel-bg" aria-hidden="true" />
           <div className="abt-panel-head">
-            <span>Where money moves, we have built it</span>
+            <span>Value, from payment to record</span>
             <a href="#qsell">
               See QSell <ArrowUpRight size={13} />
             </a>
