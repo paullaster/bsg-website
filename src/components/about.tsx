@@ -28,16 +28,16 @@ const chain = [
 
 const standards = [
   {
-    title: 'Closed to everyone else.',
-    text: 'Every action is checked on the server, so people reach only what their role allows.',
+    title: 'Your information stays protected.',
+    text: 'Only the people you allow can see or change it, and every change is recorded.',
   },
   {
-    title: 'Shaped by the work.',
-    text: 'Built around what your staff do all day, so there is little to learn and little to get wrong.',
+    title: 'Easy for the people who use it.',
+    text: 'Clear screens and short steps, so time goes to the business, not to learning the software.',
   },
   {
-    title: 'The same tomorrow.',
-    text: 'Every feature is tested end to end, so a good day stays a good day.',
+    title: 'Ready whenever you are.',
+    text: 'Every feature is tested before it reaches you, so what works today keeps working.',
   },
 ];
 
