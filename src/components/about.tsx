@@ -28,16 +28,16 @@ const chain = [
 
 const standards = [
   {
-    title: 'A record that never needs defending.',
-    text: 'Every change is kept for good: what changed, who changed it, when and why. When someone asks where a figure came from, the answer is already there.',
+    title: 'Closed to everyone else.',
+    text: 'Every action is checked on the server, so people reach only what their role allows.',
   },
   {
-    title: 'Money and data stay with the right people.',
-    text: 'Every action is checked on the server, whatever the screen shows, so each person sees and does only what their role allows.',
+    title: 'Shaped by the work.',
+    text: 'Built around what your staff do all day, so there is little to learn and little to get wrong.',
   },
   {
-    title: 'Tomorrow works the way today did.',
-    text: 'Each feature is tested from the smallest function to the complete journey, so the business is never the one to find out something broke.',
+    title: 'The same tomorrow.',
+    text: 'Every feature is tested end to end, so a good day stays a good day.',
   },
 ];
 
