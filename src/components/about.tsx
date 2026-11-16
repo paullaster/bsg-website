@@ -28,16 +28,16 @@ const chain = [
 
 const standards = [
   {
-    title: 'Nothing unaccounted for.',
-    text: 'Every order stage is timestamped with who acted, and when.',
+    title: 'Traceable to the last detail.',
+    text: 'Every change leaves a permanent trail: what changed, who changed it, when and why.',
   },
   {
-    title: 'Only the right hands.',
-    text: 'Access is checked on the server for every action.',
+    title: 'Closed by default.',
+    text: 'Every action is permission-checked on the server, so information reaches only the people it is meant for.',
   },
   {
-    title: 'Built to last.',
-    text: 'Every feature ships with automated tests, so value survives change.',
+    title: 'Reliability, proven.',
+    text: 'Every feature is tested at every level, from single functions to the full user journey, before it reaches you.',
   },
 ];
 
