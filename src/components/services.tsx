@@ -270,7 +270,7 @@ export default function Services() {
         <header className="svc-head reveal">
           <div>
             <span className="svc-kicker">Our solutions</span>
-            <h2 className="display">Solid where it counts.</h2>
+            <h2 className="display">Ready for your busiest day.</h2>
           </div>
           <p>
             Every business depends on four things: records it can trust, work that moves without

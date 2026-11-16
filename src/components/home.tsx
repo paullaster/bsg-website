@@ -120,7 +120,8 @@ function Hero() {
             </h1>
             <p className="hero-lede">
               Brainspore Group LLC (BSG) is a Kenya-based company providing software and IT
-              solutions for Africa, built to be solid, secure and reliable.
+              solutions for Africa. Businesses lean on our software because it guards what it is
+              trusted with and earns its keep every day.
             </p>
             <div className="hero-actions">
               <a className="button-primary" href="#qsell">

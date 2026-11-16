@@ -1,6 +1,6 @@
 # Brainspore Group LLC (BSG)
 
-> Brainspore Group LLC (BSG) is a Kenya-based company providing software and IT solutions for Africa, built to be solid, secure and reliable. Its flagship solution is QSell, business management software. Also known as Brainspore, Brainspore Group, BSG and BSG LLC.
+> Brainspore Group LLC (BSG) is a Kenya-based company providing software and IT solutions for Africa. Businesses lean on its software because it guards what it is trusted with and earns its keep every day. Its flagship solution is QSell, business management software. Also known as Brainspore, Brainspore Group, BSG and BSG LLC.
 
 Website: https://www.brainsporellc.com
 Location: Nairobi, Kenya
@@ -12,9 +12,9 @@ QSell is business management software built by Brainspore Group LLC. It runs sal
 
 ## How the solutions are built
 
-- Every action is on record: each change is kept permanently, with what changed, who changed it, when and why.
-- Secure by design: access is decided on the server for every action, so information reaches only the people it is meant for.
-- Reliable at every level: every feature is tested from the smallest function to the complete user journey.
+- Every move leaves a trail: what changed, who changed it, when and why is kept permanently.
+- The right keys, in the right hands: access is decided on the server for every action, so information reaches only the people it is meant for.
+- Tested until it holds: every feature is checked from the smallest function to the complete user journey.
 
 ## Where the solutions work
 

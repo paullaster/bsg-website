@@ -81,8 +81,8 @@ export default function QSell() {
               <h3>QSell business management software.</h3>
               <p>
                 It runs sales, stock, finance, delivery and people in one system, and gives each
-                business its own online storefront for customers. Secure by design, reliable at
-                every level.
+                business its own online storefront for customers. A business can lean on it from the
+                first sale to the last record.
               </p>
             </div>
             <a className="text-link" href="#contact">

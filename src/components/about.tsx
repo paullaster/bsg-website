@@ -28,16 +28,16 @@ const chain = [
 
 const standards = [
   {
-    title: 'Every action on record.',
-    text: 'Each change is kept permanently: what changed, who changed it, when and why. Nothing is altered without a trace.',
+    title: 'Every move leaves a trail.',
+    text: 'What changed, who changed it, when and why, kept permanently. Nothing is altered without a trace.',
   },
   {
-    title: 'Secure by design.',
+    title: 'The right keys, in the right hands.',
     text: 'Access is decided on the server for every action, whatever the screen shows. Information reaches only the people it is meant for.',
   },
   {
-    title: 'Reliable at every level.',
-    text: 'Tested from the smallest function to the complete user journey, so what works today keeps working.',
+    title: 'Tested until it holds.',
+    text: 'Every feature is checked from the smallest function to the complete user journey, so what works today keeps working.',
   },
 ];
 
@@ -180,20 +180,21 @@ export default function About() {
             </span>
             <span className="abt-line">
               <span>
-                that creates <em>real value.</em>
+                that earns <em>its keep.</em>
               </span>
             </span>
           </h2>
           <p className="abt-sub">
-            Real value is a payment collected, a balance safe, a record intact. Every solution we
-            make is held to that standard, and QSell is built on it.
+            Earning its keep is a payment that arrives, a balance that stays where it belongs, a
+            record that never needs defending. Every solution we make is held to that standard, and
+            QSell is built on it.
           </p>
         </div>
 
         <div className="abt-panel abt-reveal" style={{ '--d': '120ms' } as CSSProperties}>
           <div className="abt-panel-bg" aria-hidden="true" />
           <div className="abt-panel-head">
-            <span>Value, from payment to record</span>
+            <span>One payment, followed end to end</span>
             <a href="#qsell">
               See QSell <ArrowUpRight size={13} />
             </a>

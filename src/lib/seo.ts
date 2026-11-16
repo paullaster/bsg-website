@@ -54,7 +54,7 @@ export const SCREENSHOT = {
 
 export const TITLE = 'Brainspore Group (BSG) | Kenya-Based Software & IT Solutions for Africa';
 export const DESCRIPTION =
-  'Brainspore Group (BSG) is a Kenya-based company providing software and IT solutions for Africa. Maker of QSell: secure, reliable business management software.';
+  'Brainspore Group (BSG) is a Kenya-based company providing software and IT solutions for Africa. Maker of QSell, business management software businesses lean on.';
 
 export const SECTIONS = [
   { name: 'Solutions', fragment: 'what-we-do' },
@@ -101,7 +101,7 @@ export function buildJsonLd(faq: { question: string; answer: string }[]) {
     logo: { '@type': 'ImageObject', url: ORG.logo, width: 256, height: 256 },
     image: `${SITE_URL}/opengraph-image`,
     description:
-      'Brainspore Group LLC (BSG) is a Kenya-based company providing software and IT solutions for Africa, built to be solid, secure and reliable. Its flagship solution is QSell business management software.',
+      'Brainspore Group LLC (BSG) is a Kenya-based company providing software and IT solutions for Africa. Businesses lean on its software because it guards what it is trusted with and earns its keep. Its flagship solution is QSell business management software.',
     email: ORG.email,
     address: { '@type': 'PostalAddress', addressLocality: ORG.city, addressCountry: ORG.country },
     areaServed: [

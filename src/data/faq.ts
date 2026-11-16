@@ -2,7 +2,7 @@ export const faq = [
   {
     question: 'What is Brainspore Group LLC?',
     answer:
-      'Brainspore Group LLC (BSG) is a Kenya-based company providing software and IT solutions for Africa. Our solutions are built to be solid, secure and reliable.',
+      'Brainspore Group LLC (BSG) is a Kenya-based company providing software and IT solutions for Africa. Businesses lean on our software because it guards what it is trusted with and earns its keep every day.',
   },
   {
     question: 'Who founded Brainspore?',
@@ -15,7 +15,7 @@ export const faq = [
       'QSell is Brainspore’s flagship solution: business management software that runs sales, stock, finance, delivery and people in one system, and gives each business its own online storefront for customers.',
   },
   {
-    question: 'How secure and reliable is QSell?',
+    question: 'Can I trust QSell with my business?',
     answer:
       'Access is decided on the server for every action, so information reaches only the people it is meant for. Every change is kept permanently, with what changed, who changed it, when and why. Every feature is tested from the smallest function to the complete user journey.',
   },
