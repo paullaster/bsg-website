@@ -28,16 +28,16 @@ const chain = [
 
 const standards = [
   {
-    title: 'Every move leaves a trail.',
-    text: 'What changed, who changed it, when and why, kept permanently. Nothing is altered without a trace.',
+    title: 'A record that never needs defending.',
+    text: 'Every change is kept for good: what changed, who changed it, when and why. When someone asks where a figure came from, the answer is already there.',
   },
   {
-    title: 'The right keys, in the right hands.',
-    text: 'Access is decided on the server for every action, whatever the screen shows. Information reaches only the people it is meant for.',
+    title: 'Money and data stay with the right people.',
+    text: 'Every action is checked on the server, whatever the screen shows, so each person sees and does only what their role allows.',
   },
   {
-    title: 'Tested until it holds.',
-    text: 'Every feature is checked from the smallest function to the complete user journey, so what works today keeps working.',
+    title: 'Tomorrow works the way today did.',
+    text: 'Each feature is tested from the smallest function to the complete journey, so the business is never the one to find out something broke.',
   },
 ];
 
