@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react';
 import type { CSSProperties } from 'react';
 import Image from 'next/image';
-import { ArrowUpRight, Check, Landmark, Smartphone, Wallet } from 'lucide-react';
+import { ArrowUpRight, Landmark, Smartphone, Wallet } from 'lucide-react';
 
 const chain = [
   {
@@ -25,8 +25,6 @@ const chain = [
     text: 'Every shilling accounted for, so the books agree.',
   },
 ];
-
-const standards = ['Secure.', 'Reliable.', 'Made to serve its users.'];
 
 type Project = { org: string; system: string; text: string; logo?: string };
 
@@ -186,21 +184,6 @@ export default function About() {
         </div>
 
         <FounderGlance />
-
-        <ul className="abt-standards">
-          {standards.map((item, i) => (
-            <li
-              key={item}
-              className="abt-reveal"
-              style={{ '--d': `${i * 110}ms` } as CSSProperties}
-            >
-              <span className="abt-check">
-                <Check size={14} strokeWidth={2.4} />
-              </span>
-              <b>{item}</b>
-            </li>
-          ))}
-        </ul>
       </div>
     </section>
   );
