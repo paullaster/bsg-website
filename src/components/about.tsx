@@ -46,21 +46,25 @@ type Project = { org: string; system: string; text: string; logo?: string };
 const projects: Project[] = [
   {
     org: 'Engineers Board of Kenya',
+    logo: '/logos/ebk.svg',
     system: 'Membership portal',
     text: 'Membership for the regulator of Kenya’s engineers.',
   },
   {
     org: 'Institution of Engineers of Kenya',
+    logo: '/logos/iek.svg',
     system: 'Events and CPD portal',
     text: 'Event bookings and professional development for the engineers’ professional body.',
   },
   {
     org: 'National Research Fund',
+    logo: '/logos/nrf.svg',
     system: 'Grant management portal',
     text: 'Grant calls, applications and reviewers for a national research fund.',
   },
   {
     org: 'Médecins Sans Frontières',
+    logo: '/logos/msf.svg',
     system: 'Staff portal',
     text: 'The internal portal an organisation’s staff work in every day.',
   },
@@ -100,6 +104,7 @@ function FounderGlance() {
                   alt={`${item.org} logo`}
                   width={240}
                   height={96}
+                  loading="eager"
                   unoptimized
                 />
               ) : (
